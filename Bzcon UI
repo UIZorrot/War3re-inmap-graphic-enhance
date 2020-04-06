@@ -1,0 +1,175 @@
+
+function Trig_UI_change_Actions takes nothing returns nothing
+
+local framehandle c2 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 2)
+local framehandle c1 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 1)
+local framehandle c0 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0)
+local framehandle c3 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 3)
+local framehandle c4 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 4)
+local framehandle c5 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 5)
+local framehandle c6 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 6)
+local framehandle c7 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 7)
+local framehandle c8 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 8)
+local framehandle c9 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 9)
+local framehandle c10 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 10)
+local framehandle c11 = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 11)
+
+local framehandle i0 = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)
+local framehandle i1 = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 1)
+local framehandle i2 = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 2)
+local framehandle i3 = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 3)
+local framehandle i4 = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 4)
+local framehandle i5 = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 5)
+
+local framehandle h0 = BlzGetOriginFrame( ORIGIN_FRAME_HERO_BUTTON , 0)
+local framehandle h1 = BlzGetOriginFrame( ORIGIN_FRAME_HERO_BUTTON , 1)
+local framehandle h2 = BlzGetOriginFrame( ORIGIN_FRAME_HERO_BUTTON , 2)
+local framehandle h3 = BlzGetOriginFrame( ORIGIN_FRAME_HERO_BUTTON , 3)
+local framehandle h4 = BlzGetOriginFrame( ORIGIN_FRAME_HERO_BUTTON , 4)
+local framehandle h5 = BlzGetOriginFrame( ORIGIN_FRAME_HERO_BUTTON , 5)
+local framehandle h6 = BlzGetOriginFrame( ORIGIN_FRAME_HERO_BUTTON , 6)
+
+local framehandle Game        = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
+local framehandle World       = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0)
+local framehandle HeroBar     = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0)
+local framehandle Portrait    = BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0)
+local framehandle Minimap     = BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0)
+local framehandle Tooltip     = BlzGetOriginFrame(ORIGIN_FRAME_TOOLTIP, 0)
+local framehandle UberTooltip = BlzGetOriginFrame(ORIGIN_FRAME_UBERTOOLTIP, 0)
+local framehandle ChatMsg     = BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG, 0)
+local framehandle UnitMsg     = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0)
+local framehandle TopMsg      = BlzGetOriginFrame(ORIGIN_FRAME_TOP_MSG, 0)
+
+
+
+call BlzEnableUIAutoPosition(false)
+call BlzFrameClearAllPoints(World)
+call BlzFrameSetParent(Portrait,Game)
+
+//UI调整避免BUG
+
+call BlzFrameSetAlpha(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON,0)),255)
+call BlzFrameSetVisible(BlzGetFrameByName("ConsoleUIBackdrop",0),false)
+call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0))
+
+//头像框
+
+call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), FRAMEPOINT_LEFT, 0.265, 0.04 )
+call BlzFrameSetSize(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0)),0.065,0.0425)
+call BlzFrameSetSize(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0),0.065,0.0425)
+
+//小地图
+
+call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), 0.8)
+call BlzFrameSetScale(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 0)), 0.8)
+
+//右边的12个图标（技能栏）
+
+call BlzFrameClearAllPoints(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0)))
+call BlzFrameSetAbsPoint(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0)), FRAMEPOINT_LEFT, 0.198, 0.038)
+call BlzFrameSetScale(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0)), 0.7)
+
+call BlzFrameClearAllPoints(BlzFrameGetParent(c0))
+call BlzFrameSetAbsPoint(c0, FRAMEPOINT_LEFT, 0.524, 0.0145)
+call BlzFrameSetSize(BlzGetFrameByName("CommandButton_0",0),0.0445,0.044)
+
+call BlzFrameClearAllPoints((c1))
+call BlzFrameSetAbsPoint(c1, FRAMEPOINT_LEFT, 0.548, 0.0145)
+call BlzFrameSetSize(BlzGetFrameByName("CommandButton_1",0),0.0445,0.044)
+
+call BlzFrameClearAllPoints((c2))
+call BlzFrameSetAbsPoint(c2, FRAMEPOINT_LEFT, 0.572, 0.0145)
+call BlzFrameSetSize(BlzGetFrameByName("CommandButton_2",0),0.0445,0.044)
+
+call BlzFrameClearAllPoints((c3))
+call BlzFrameSetAbsPoint(c3, FRAMEPOINT_LEFT, 0.596, 0.0145)
+call BlzFrameSetSize(BlzGetFrameByName("CommandButton_3",0),0.0445,0.044)
+
+call BlzFrameClearAllPoints((c4))
+call BlzFrameSetAbsPoint(c4, FRAMEPOINT_LEFT, 0.62, 0.0145)
+call BlzFrameSetSize(BlzGetFrameByName("CommandButton_4",0),0.0445,0.044)
+
+call BlzFrameClearAllPoints((c5))
+call BlzFrameSetAbsPoint(c5, FRAMEPOINT_LEFT, 0.644, 0.0145)
+call BlzFrameSetSize(BlzGetFrameByName("CommandButton_5",0),0.0445,0.044)
+
+call BlzFrameClearAllPoints((c6))
+call BlzFrameSetAbsPoint(c6, FRAMEPOINT_LEFT, 0.668, 0.0145)
+call BlzFrameSetSize(BlzGetFrameByName("CommandButton_6",0),0.0445,0.044)
+
+call BlzFrameClearAllPoints((c7))
+call BlzFrameSetAbsPoint(c7, FRAMEPOINT_LEFT, 0.658, 0.045)
+call BlzFrameSetScale(BlzGetFrameByName("CommandButton_7",0),0.89)
+
+call BlzFrameClearAllPoints((c8))
+call BlzFrameSetAbsPoint(c8, FRAMEPOINT_LEFT, 0.524, 0.045)
+call BlzFrameSetScale(BlzGetFrameByName("CommandButton_8",0),0.89)
+
+call BlzFrameClearAllPoints((c9))
+call BlzFrameSetAbsPoint(c9, FRAMEPOINT_LEFT, 0.5575, 0.045)
+call BlzFrameSetScale(BlzGetFrameByName("CommandButton_9",0),0.89)
+
+call BlzFrameClearAllPoints((c10))
+call BlzFrameSetAbsPoint(c10, FRAMEPOINT_LEFT, 0.5905, 0.045)
+call BlzFrameSetScale(BlzGetFrameByName("CommandButton_10",0),0.89)
+
+call BlzFrameClearAllPoints((c11))
+call BlzFrameSetAbsPoint(c11, FRAMEPOINT_LEFT, 0.6245, 0.045)
+call BlzFrameSetScale(BlzGetFrameByName("CommandButton_11",0),0.89)
+   
+
+//物品栏
+
+
+
+call BlzFrameClearAllPoints(BlzFrameGetParent(i0))
+call BlzFrameSetScale(BlzFrameGetParent(i0),0.5)
+call BlzFrameSetScale(BlzFrameGetParent(i1),0.5)
+call BlzFrameSetScale(BlzFrameGetParent(i2),0.5)
+call BlzFrameSetScale(BlzFrameGetParent(i3),0.5)
+call BlzFrameSetScale(BlzFrameGetParent(i4),0.5)
+call BlzFrameSetScale(BlzFrameGetParent(i5),0.5)
+
+call BlzFrameClearAllPoints((i0))
+call BlzFrameSetAbsPoint(i0, FRAMEPOINT_LEFT, 0.712, 0.054)  //设置在屏幕上的位置
+call BlzFrameSetSize(i0,0.033,0.032) //设置大小
+
+call BlzFrameClearAllPoints((i1))
+call BlzFrameSetAbsPoint(i1, FRAMEPOINT_LEFT, 0.736, 0.054)
+call BlzFrameSetSize(i1,0.033,0.032)
+
+call BlzFrameClearAllPoints((i2))
+call BlzFrameSetAbsPoint(i2, FRAMEPOINT_LEFT, 0.76, 0.054)
+call BlzFrameSetSize(i2,0.033,0.032)
+
+call BlzFrameClearAllPoints((i3))
+call BlzFrameSetAbsPoint(i3, FRAMEPOINT_LEFT, 0.712, 0.03)
+call BlzFrameSetSize(i3,0.033,0.032)
+
+call BlzFrameClearAllPoints((i4))
+call BlzFrameSetAbsPoint(i4, FRAMEPOINT_LEFT, 0.736, 0.03)
+call BlzFrameSetSize(i4,0.033,0.032)
+
+call BlzFrameClearAllPoints((i5))
+call BlzFrameSetAbsPoint(i5, FRAMEPOINT_LEFT, 0.76, 0.03)
+call BlzFrameSetSize(i5,0.033,0.032)
+
+
+//单位详情
+
+call BlzFrameSetScale(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)),0.68)
+call BlzFrameSetAbsPoint(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)),FRAMEPOINT_LEFT,0.365,0)
+call BlzFrameSetAbsPoint(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)),FRAMEPOINT_TOP,0.42,0.08)
+
+
+call BlzFrameSetVisible(World,true)
+call BlzFrameSetVisible(Game,true)
+
+endfunction
+
+//===========================================================================
+function InitTrig_UI_change takes nothing returns nothing
+    set gg_trg_UI_change = CreateTrigger(  )
+    call TriggerRegisterTimerEventSingle( gg_trg_UI_change, 0.00 )
+    call TriggerAddAction( gg_trg_UI_change, function Trig_UI_change_Actions )
+endfunction
