@@ -1,27 +1,29 @@
-This project is meant to improve war3re graphic quality
-
 这个项目主要是为了让魔兽3重制版画面更好些
-
-We modified light, shadow, mat, water, daynightcycle, fog, ui to make it better
 
 我们修改了光照，阴影，材质，水面，昼夜交替，迷雾，游戏界面
 
-There are two demo, which is human06 and EI
-
 这里有两个演示地图，分别是人族斯坦索姆战役和经典对抗地图EI
-
-the map is open free, if you use it, tag 天下正义 as author
 
 地图是开源的，如果你要使用素材，请注明素材来自 天下正义
 
-the source code of blzcon 2018 ui is represented outside the map, written in vJass. Don't forget use it with material
-
 大家比较关心的嘉年华UI代码我直接放在外面，语言vJass，注意搭配地图中素材使用。
-
-not very professional, enjoy yourself
 
 没有写的很专业，希望好用。
 
-We still working on this project, there will be update
-
 随时都会有更新
+
+
+
+This project is meant to improve war3re graphic quality
+
+We modified light, shadow, mat, water, daynightcycle, fog, ui to make it better
+
+There are two demo, which is human06 and EI
+
+the map is open free, if you use it, tag 天下正义 as author
+
+the source code of blzcon 2018 ui is represented outside the map, written in vJass. Don't forget use it with material
+
+not very professional, enjoy yourself
+
+We still working on this project, there will be update
