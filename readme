@@ -1,3 +1,15 @@
+This project is meant to improve war3re graphic quality
+
+这个项目主要是为了让魔兽3重制版画面更好些
+
+We modified light, shadow, mat, water, daynightcycle, fog, ui to make it better
+
+我们修改了光照，阴影，材质，水面，昼夜交替，迷雾，游戏界面
+
+There are two demo, which is human06 and EI
+
+这里有两个演示地图，分别是人族斯坦索姆战役和经典对抗地图EI
+
 the map is open free, if you use it, tag 天下正义 as author
 
 地图是开源的，如果你要使用素材，请注明素材来自 天下正义
