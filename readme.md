@@ -6,20 +6,35 @@ War3re-inmap-graphic-enhance 魔兽重置版画面增强
 （Thanks for the help of “rufreakde，涛” from Reddit）
 
 ├── Readme // Readme
+
 ├── Bzcon UI // script of Blzcon UI 新UI的代码
+
 ├── Blzcon UI command bar fixed // a fixed version of Blzcon UI
+
 ├── Humanprotro-cn.*.rar // A custom map using enhancement 一个用上了图像增强的RPG地图
+
 ├── echoisles-re1.w3x // echo isles demo with enhancement and old UI 一个在EI上的demo
+
 ├── war3enhance.reg // Graphical Enhancement script 图像增强的代码
+
 ├── Mod // Graphic Enhancement Mod wrapped using Winrar
+
 │ ├── War3GraphicEnhance-mod v1.0.part1.rar
+
 │ ├── War3GraphicEnhance-mod v1.0.part2.rar
+
 │ ├── War3GraphicEnhance-mod v1.0.part3.rar
+
 ├── Test Bundle // Map files with enhancement, with blzcon UI and without UI separated 这个文件夹内有所有的地图文件，有blzcon的UI和没有的是有分开的
+
 │ ├── *.w3x //Without UI
+
 │ ├── WithUI
+
 | │ ├── *.w3x//With UI
+
 ├── Backup // currently empty 现在是空的
+
 │ ├──
 
 简介
