@@ -1,10 +1,8 @@
 War3re-inmap-graphic-enhance 魔兽重置版画面增强
 =============================================
 
-文件目录
--------
-Catalog
--------
+文件目录 Catalog
+----------------
 （Thanks for the help of “rufreakde，涛” from Reddit）
 
 ├── Readme // Readme
