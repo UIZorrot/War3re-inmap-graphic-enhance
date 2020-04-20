@@ -15,6 +15,8 @@ War3re-inmap-graphic-enhance 魔兽重置版画面增强
 
 ├── Demo // example war3 map 演示魔兽地图
 
+| ├── TurtleRock-re.*.rar // TR re-grahpic 图像增强TR
+
 | ├── Humanprotro-cn.*.rar // A custom map using enhancement 一个用上了图像增强的RPG地图
 
 | ├── echoisles-re1.w3x // echo isles demo with enhancement and old UI 一个在EI上的demo
