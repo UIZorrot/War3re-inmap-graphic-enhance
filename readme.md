@@ -17,6 +17,8 @@ The war3map files is in TestBundle/ and Demo/
 
 | ├── Blzcon UI command bar fixed // a fixed version of Blzcon UI
 
+| ├── Lots of cs // To decompress some blz files 
+
 ├── Demo // example war3 map 演示魔兽地图
 
 | ├── TurtleRock-re.*.rar // TR re-grahpic 图像增强TR
