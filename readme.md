@@ -21,6 +21,22 @@ The war3map files is in TestBundle/ and Demo/
 
 ├── Demo // example war3 map 演示魔兽地图
 
+(The following map require MOD to work correctly)
+
+| ├── TurtleRock-re
+
+| ├── echoisles-re
+
+| ├── lastrefuge-re
+
+| ├── northernisles-re
+
+| ├── terenasstand_lv-re
+
+| ├── twistedmeadows-re
+
+(downloadsite:http://www.warchasersreforged.com/)
+
 | ├── TurtleRock-re.*.rar // TR re-grahpic 图像增强TR
 
 | ├── Humanprotro-cn.*.rar // A custom map using enhancement 一个用上了图像增强的RPG地图
