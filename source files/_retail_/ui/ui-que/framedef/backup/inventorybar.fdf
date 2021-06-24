@@ -1,0 +1,101 @@
+Frame "SIMPLEBUTTON" "ObserverInventoryButtonTemplate" {
+	Width 0.033,
+	Height 0.033,
+}
+
+Frame "SIMPLEFRAME" "SimpleObserverInventoryBar" {
+    UseActiveContext,
+    Width 0.128,
+    Height 0.175,       
+	
+	Frame "SIMPLEBUTTON" "ObserverInventoryButton_0" INHERITS "ObserverInventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleObserverInventoryBar", TOPRIGHT, 0.027, 0.0,
+	}
+	
+	Frame "SIMPLEBUTTON" "ObserverInventoryButton_1" INHERITS "ObserverInventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleObserverInventoryBar", TOPRIGHT, 0.067, 0.0,
+	}
+	
+	Frame "SIMPLEBUTTON" "ObserverInventoryButton_2" INHERITS "ObserverInventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleObserverInventoryBar", TOPRIGHT, 0.027, -0.0403,
+	}
+	
+	Frame "SIMPLEBUTTON" "ObserverInventoryButton_3" INHERITS "ObserverInventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleObserverInventoryBar", TOPRIGHT, 0.067, -0.0403,
+	}
+	
+	Frame "SIMPLEBUTTON" "ObserverInventoryButton_4" INHERITS "ObserverInventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleObserverInventoryBar", TOPRIGHT, 0.027, -0.08,
+	}
+	
+	Frame "SIMPLEBUTTON" "ObserverInventoryButton_5" INHERITS "ObserverInventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleObserverInventoryBar", TOPRIGHT, 0.067, -0.08,
+	}
+
+	Frame "TEXT" "ObserverInventoryText"{
+        Width 0.0,
+		Height 0.0,
+	}     
+}
+
+Frame "SIMPLEBUTTON" "InventoryButtonTemplate" {
+	Width 0.027,
+	Height 0.027,
+}
+
+Frame "SIMPLEFRAME" "SimpleInventoryBar" {
+    UseActiveContext,
+	SetAllPoints, 
+	
+	Frame "SIMPLEBUTTON" "InventoryButton_0" INHERITS "InventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleInventoryBar", TOPRIGHT, 0.0195, -0.02,
+	}
+	
+	Frame "SIMPLEBUTTON" "InventoryButton_1" INHERITS "InventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleInventoryBar", TOPRIGHT, 0.0505, -0.02,
+	}
+	
+	Frame "SIMPLEBUTTON" "InventoryButton_2" INHERITS "InventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleInventoryBar", TOPRIGHT, 0.0195, -0.05,
+	}
+	
+	Frame "SIMPLEBUTTON" "InventoryButton_3" INHERITS "InventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleInventoryBar", TOPRIGHT, 0.0505, -0.05,
+	}
+	
+	Frame "SIMPLEBUTTON" "InventoryButton_4" INHERITS "InventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleInventoryBar", TOPRIGHT, 0.0195, -0.08,
+	}
+	
+	Frame "SIMPLEBUTTON" "InventoryButton_5" INHERITS "InventoryButtonTemplate" {
+		SetPoint TOPLEFT, "SimpleInventoryBar", TOPRIGHT, 0.0505, -0.08,
+	}
+
+	Frame "TEXT" "InventoryText"{
+        Width 0.07125,
+		Height 0.01125,    
+        DecorateFileNames,
+        SetPoint TOPLEFT, "SimpleInventoryBar", TOPRIGHT, 0.015, 0,
+        Text "INVENTORY",		
+		FrameFont "MasterFont", 0.010, "",  
+		FontFlags "FIXEDSIZE",
+		FontColor 0.99 0.827 0.070 1.0,
+		FontShadowColor 0.0 0.0 0.0 0.9,	
+		FontShadowOffset 0.001 -0.001,	
+        FontJustificationH JUSTIFYCENTER,
+	}     
+}
+Frame "SIMPLEFRAME" "SimpleInventoryCover" {
+	UseActiveContext,
+    DecorateFileNames,	
+    Width 0.000128,
+    Height 0.000175,        
+	SetPoint BOTTOMRIGHT, "ConsoleUI", BOTTOMLEFT, 0.6, 0.0,
+	
+	Texture "InventoryCoverTexture" {       
+		Width 0.127,
+		Height 0.12, 
+		SetPoint BOTTOMRIGHT, "SimpleInventoryCover", BOTTOMRIGHT, 0.012, 0.0,
+		File "ConsoleInventoryCoverTexture",
+	}
+}

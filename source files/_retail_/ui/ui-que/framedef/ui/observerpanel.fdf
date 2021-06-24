@@ -1,0 +1,150 @@
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+String "ObserverPanelStringTemplate" {
+	FontColor 0.99 0.827 0.0705 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,
+	FontShadowOffset 0.001 -0.001,
+	Font "MasterFont",0.008,
+}
+
+Texture "ObserverBarIconTemplate" {
+	Width 0.01,
+	Height 0.01,
+}
+
+Texture "ObserverBarTournamentIconTemplate" {
+	Width 0.025,
+	Height 0.025,
+}
+
+Frame "SIMPLEFRAME" "SimpleObserverPanel" {
+	DecorateFileNames,
+	SetAllPoints,
+	
+	Frame "SIMPLEFRAME" "ObserverControlPanel" {
+		DecorateFileNames,
+		SetAllPoints,
+		
+		Frame "POPUPMENU" "ObserverVisionMenu" {
+			SetPoint TOPRIGHT,"SimpleObserverPanel",TOPRIGHT,-0,-0.006,
+			Width 0.164,
+			Height 0.024,
+			PopupButtonInset 0.01,
+
+			ControlBackdrop "ObserverVisionMenuBackdrop",
+			Frame "BACKDROP" "ObserverVisionMenuBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+				BackdropCornerSize	0.0125,
+				BackdropBackgroundSize	0.128,
+				BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+			}
+
+			ControlDisabledBackdrop "ObserverVisionMenuDisabledBackdrop",
+			Frame "BACKDROP" "ObserverVisionMenuDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+				BackdropCornerSize	0.0125,
+				BackdropBackgroundSize	0.128,
+				BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+			}
+
+			PopupTitleFrame "ObserverVisionMenuTitle",
+			Frame "GLUETEXTBUTTON" "ObserverVisionMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+			}
+
+			PopupArrowFrame "ObserverVisionMenuArrow",
+			Frame "BUTTON" "ObserverVisionMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+			}
+
+			PopupMenuFrame "ObserverVisionPopupMenu",
+			Frame "MENU" "ObserverVisionPopupMenu" INHERITS "EscMenuPopupMenuMenuTemplate" {
+				DecorateFileNames,
+				FrameFont "EscMenuTextFont",0.011,"",
+				MenuItemHeight 0.012,
+				MenuBorder 0.01,
+
+				ControlBackdrop "ObserverVisionPopupMenuMenuBackdropTemplate",
+				Frame "BACKDROP" "ObserverVisionPopupMenuMenuBackdropTemplate" INHERITS "EscMenuButtonBackdropTemplate" {
+					DecorateFileNames,
+					BackdropCornerSize	0.0125,
+					BackdropBackgroundSize	0.128,
+					BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+					BackdropBackground "EscMenuEditBoxBackground",
+				}
+			}
+		}
+
+		Frame "SIMPLECHECKBOX" "ObserverFogCheckBox" {
+			DecorateFileNames,
+			SetPoint TOPRIGHT,"ObserverVisionMenu",TOPRIGHT,-0.13,-0.03,
+			Width 0.02,
+			Height 0.02,
+			
+			NormalTexture "ReplayCheckBoxNormal",
+			PushedTexture "ReplayCheckBoxPressed",
+			CheckedTexture "ReplayCheckBoxCheck",
+
+			String "ObserverFogString" INHERITS "ObserverPanelStringTemplate" {
+				SetPoint LEFT,"ObserverFogCheckBox",RIGHT,0.004,0,
+				FontJustificationH JUSTIFYLEFT,
+				Text "FOG_OF_WAR",
+			}
+		}
+
+		Frame "SIMPLECHECKBOX" "ObserverCameraCheckBox" {
+			DecorateFileNames,
+			SetPoint LEFT,"ObserverFogCheckBox",LEFT,0,-0.02,
+			Width 0.02,
+			Height 0.02,
+			
+			NormalTexture "ReplayCheckBoxNormal",
+			PushedTexture "ReplayCheckBoxPressed",
+			CheckedTexture "ReplayCheckBoxCheck",
+
+			String "ObserverCameraString" INHERITS "ObserverPanelStringTemplate" {
+				SetPoint LEFT,"ObserverCameraCheckBox",RIGHT,0.005,0,
+				FontJustificationH JUSTIFYLEFT,
+				Text "REPLAY_CAMERA",
+			}
+		}
+	}
+		
+	Frame "SIMPLEFRAME" "ObserverResourceBarFrame" {
+		DecorateFileNames,
+		Width 0.32,
+		Height 0.01,
+		
+		Texture INHERITS "ObserverBarIconTemplate" {
+			Anchor TOPLEFT, 0.02, 0.006,
+			File "GoldIcon",
+		}
+
+		Texture INHERITS "ObserverBarIconTemplate" {
+			Anchor TOPLEFT, 0.08, 0.006,
+			File "LumberIcon",
+		}
+
+		Texture INHERITS "ObserverBarIconTemplate" {
+			Anchor TOPLEFT, 0.142, 0.006,
+			File "SupplyIcon",
+		}
+	}	
+	
+	Frame "SIMPLEFRAME" "ObserverResourceBarTournamentFrame" {
+		DecorateFileNames,
+		Width 0.32,
+		Height 0.01,
+		
+		Texture INHERITS "ObserverBarTournamentIconTemplate" {
+			Anchor TOPLEFT, 0.024, 0.002,
+			File "ObserverConsoleSupplyIcon",
+		}
+
+		Texture INHERITS "ObserverBarTournamentIconTemplate" {
+			Anchor TOPLEFT, 0.087, 0.002,
+			File "ObserverConsoleGoldIcon",
+		}
+
+		Texture INHERITS "ObserverBarTournamentIconTemplate" {
+			Anchor TOPLEFT, 0.146, 0.002,
+			File "ObserverConsoleLumberIcon",
+		}
+	}	
+}

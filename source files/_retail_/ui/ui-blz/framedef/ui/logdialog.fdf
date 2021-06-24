@@ -1,0 +1,77 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "LogDialog" {
+    Width 0.384f,
+    Height 0.432f,
+
+    Frame "BACKDROP" "LogBackdrop" {
+        SetAllPoints,
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.048,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "EscMenuBorder",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "LogTitle" INHERITS "EscMenuTitleTextTemplate" {
+        SetPoint TOP, "LogDialog", TOP, 0.0, -0.03,
+        FontJustificationH JUSTIFYCENTER,
+        Text "MESSAGE_LOG",
+    }
+
+
+    // --- bottom controls
+    Frame "GLUETEXTBUTTON" "LogOkButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        Width 0.13,
+        SetPoint BOTTOM, "LogDialog", BOTTOM, 0.0, 0.03,
+
+        ButtonText "LogOkButtonText",
+	    Frame "TEXT" "LogOkButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "OK",
+	    }        
+    }
+
+    // --- Log history
+    Frame "BACKDROP" "LogAreaBackdrop" {
+        Width 0.32,
+        Height 0.295,
+        SetPoint BOTTOM, "LogOkButton", TOP, 0.0, 0.01125,
+
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuEditBoxBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.0125,
+        BackdropBackgroundSize  0.256,
+        BackdropBackgroundInsets 0.005 0.005 0.005 0.005,
+        BackdropEdgeFile  "EscMenuEditBoxBorder",
+	    BackdropBlendAll,
+
+        Frame "TEXTAREA" "LogArea" {
+            Height 0.265,
+            Width 0.30675,
+            SetPoint LEFT, "LogAreaBackdrop", LEFT, 0.00725, -0.000625,
+
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            TextAreaLineGap 0.0015,
+            TextAreaMaxLines 128,
+            TextAreaLineHeight 0.01,
+            TextAreaInset 0.002,
+
+            TextAreaScrollBar "LogAreaScrollBar",
+            Frame "SCROLLBAR" "LogAreaScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+            }
+        }
+    }
+}

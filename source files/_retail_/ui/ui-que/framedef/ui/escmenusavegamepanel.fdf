@@ -1,0 +1,234 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+Frame "TEXT" "EscMenuSaveDialogTextTemplate" {
+    DecorateFileNames,
+    FrameFont "EscMenuTextFont", 0.013, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.5 0.5 0.5 1.0,
+    FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "EscMenuSaveGamePanel" {
+    SetAllPoints,
+	TabFocusPush,
+
+    // ***********************************************
+    // **
+    // **   Save Game Panel
+    // **
+    // **********
+
+	Frame "FRAME" "EscMenuSaveLoadContainer" {
+		Width 0.432,
+		Height 0.288,
+
+		Frame "FRAME" "SaveAndLoad" {
+
+			Frame "FRAME" "FileListFrame" {
+				SetPoint TOP, "EscMenuSaveGamePanel", TOP, 0.0, -0.048,
+				Width 0.362,
+				Height 0.135,
+			}
+		}
+		
+		Frame "FRAME" "LoadOnly" {
+
+	        Frame "TEXT" "LoadGameTitleText" INHERITS "EscMenuTitleTextTemplate" {
+	            SetPoint TOP, "EscMenuSaveGamePanel", TOP, 0.0, -0.03,
+
+	            FontColor 1.0 1.0 1.0 1.0,
+	            Text "LOAD_GAME",
+	        }
+
+	        Frame "GLUETEXTBUTTON" "LoadGameLoadButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint BOTTOMLEFT, "EscMenuSaveGamePanel", BOTTOMLEFT, 0.035, 0.03,
+				Width 0.118,
+				ControlShortcutKey "KEY_LOAD_SHORTCUT",
+				TabFocusNext "LoadGameCancelButton",
+				
+	            ButtonText "LoadGameLoadButtonText",
+		        Frame "TEXT" "LoadGameLoadButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_LOAD",
+		        }
+	        }
+
+	        Frame "GLUETEXTBUTTON" "LoadGameCancelButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint LEFT, "LoadGameLoadButton", RIGHT, 0.128, 0.0,
+				Width 0.118,
+                ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+				TabFocusNext "LoadGameLoadButton",
+				
+	            ButtonText "LoadGameCancelButtonText",
+		        Frame "TEXT" "LoadGameCancelButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_CANCEL",
+		        }
+	        }
+		}
+		
+		Frame "FRAME" "SaveOnly" {
+
+	        Frame "TEXT" "SaveGameTitleText" INHERITS "EscMenuTitleTextTemplate" {
+	            SetPoint TOP, "EscMenuSaveGamePanel", TOP, 0.0, -0.03,
+
+	            FontColor 1.0 1.0 1.0 1.0,
+	            Text "SAVE_GAME",
+	        }
+		
+	        Frame "GLUETEXTBUTTON" "SaveGameSaveButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint BOTTOMLEFT, "EscMenuSaveGamePanel", BOTTOMLEFT, 0.035, 0.03,
+				Width 0.118,
+				ControlShortcutKey "KEY_SAVE_SHORTCUT",
+				TabFocusNext "SaveGameDeleteButton",
+
+	            ButtonText "SaveGameSaveButtonText",
+		        Frame "TEXT" "SaveGameSaveButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_SAVE",
+		        }
+	        }
+
+	        Frame "GLUETEXTBUTTON" "SaveGameDeleteButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint LEFT, "SaveGameSaveButton", RIGHT, 0.005, 0.0,
+				Width 0.118,
+				ControlShortcutKey "KEY_DELETE_SHORTCUT",
+				TabFocusNext "SaveGameCancelButton",
+
+	            ButtonText "SaveGameDeleteButtonText",
+		        Frame "TEXT" "SaveGameDeleteButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_DELETE",
+		        }
+	        }
+
+	        Frame "GLUETEXTBUTTON" "SaveGameCancelButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint LEFT, "SaveGameDeleteButton", RIGHT, 0.005, 0.0,
+				Width 0.118,
+                ControlShortcutKey "KEY_CANCEL_SHORTCUT",				
+				TabFocusNext "SaveGameFileEditBox",
+
+	            ButtonText "SaveGameCancelButtonText",
+		        Frame "TEXT" "SaveGameCancelButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_CANCEL",
+		        }
+	        }
+
+	        Frame "EDITBOX" "SaveGameFileEditBox" INHERITS WITHCHILDREN "EscMenuEditBoxTemplate" {
+	            Width 0.362,
+	            Height 0.037,
+	            SetPoint BOTTOM, "SaveGameDeleteButton", TOP, 0.0, 0.005,
+                TabFocusDefault,
+				TabFocusNext "SaveGameSaveButton",
+
+	            EditTextFrame "SaveGameFileEditBoxText",
+	            Frame "TEXT" "SaveGameFileEditBoxText" INHERITS "EscMenuEditBoxTextTemplate" {
+	            }
+	        }
+		
+		}
+	}
+	
+	Frame "FRAME" "EscMenuOverwriteContainer" {
+		Width 0.336,
+		Height 0.192,
+
+		Frame "FRAME" "OverwriteOnly" {
+	        Frame "TEXT" "OverwriteTitleText" INHERITS "EscMenuTitleTextTemplate" {
+	            SetPoint TOP, "EscMenuSaveGamePanel", TOP, 0.0, -0.03,
+
+	            FontColor 1.0 1.0 1.0 1.0,
+	            Text "OVERWRITE_SAVED_GAME",
+	        }
+
+	        Frame "TEXT" "OverwriteMessageText" INHERITS "EscMenuSaveDialogTextTemplate" {
+	            SetPoint TOP, "OverwriteTitleText", BOTTOM, 0.0, -0.005,
+				Width 0.26,
+				FontJustificationH JUSTIFYCENTER,
+				
+				// NOTE: Message is created programatically, starting from OVERWRITE_MESSAGE
+	            Text "EMPTY_STRING",
+	        }
+	        
+	        Frame "GLUETEXTBUTTON" "OverwriteOverwriteButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint BOTTOMLEFT, "EscMenuSaveGamePanel", BOTTOMLEFT, 0.035, 0.03,
+				Width 0.129,
+				
+				TabFocusNext "OverwriteCancelButton",
+                ControlShortcutKey "KEY_OVERWRITE_SHORTCUT",
+	            ButtonText "OverwriteOverwriteButtonText",
+		        Frame "TEXT" "OverwriteOverwriteButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_OVERWRITE",
+		        }
+	        }
+
+	        Frame "GLUETEXTBUTTON" "OverwriteCancelButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint LEFT, "OverwriteOverwriteButton", RIGHT, 0.006, 0.0,
+				Width 0.129,
+				ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+				TabFocusNext "OverwriteOverwriteButton",
+
+	            ButtonText "OverwriteCancelButtonText",
+		        Frame "TEXT" "OverwriteCancelButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_CANCEL",
+		        }
+	        }
+		}
+	}
+	
+	
+	Frame "FRAME" "EscMenuDeleteContainer" {
+		Width 0.336,
+		Height 0.192,
+
+		Frame "FRAME" "DeleteOnly" {
+	        Frame "TEXT" "DeleteTitleText" INHERITS "EscMenuTitleTextTemplate" {
+	            SetPoint TOP, "EscMenuSaveGamePanel", TOP, 0.0, -0.03,
+
+	            FontColor 1.0 1.0 1.0 1.0,
+	            Text "DELETE_SAVED_GAME",
+	        }
+
+	        Frame "TEXT" "DeleteMessageText" INHERITS "EscMenuSaveDialogTextTemplate" {
+	            SetPoint TOP, "DeleteTitleText", BOTTOM, 0.0, -0.005,
+				Width 0.26,
+				FontJustificationH JUSTIFYCENTER,
+				
+				// NOTE: Message is created programatically, starting from DELETE_MESSAGE
+	            Text "EMPTY_STRING",
+	        }
+	        
+	        Frame "GLUETEXTBUTTON" "DeleteDeleteButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint BOTTOMLEFT, "EscMenuSaveGamePanel", BOTTOMLEFT, 0.035, 0.03,
+				Width 0.129,
+				
+				TabFocusNext "DeleteCancelButton",
+                ControlShortcutKey "KEY_DELETE_SHORTCUT",
+	            ButtonText "DeleteDeleteButtonText",
+		        Frame "TEXT" "DeleteDeleteButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_DELETE",
+		        }
+	        }
+
+	        Frame "GLUETEXTBUTTON" "DeleteCancelButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+	            SetPoint LEFT, "DeleteDeleteButton", RIGHT, 0.006, 0.0,
+				Width 0.129,
+				
+				TabFocusNext "DeleteDeleteButton",
+                ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+	            ButtonText "DeleteCancelButtonText",
+		        Frame "TEXT" "DeleteCancelButtonText" INHERITS "EscMenuButtonTextTemplate" {
+			        Text "KEY_CANCEL",
+		        }
+	        }
+		}
+	}
+		
+}

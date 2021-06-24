@@ -1,0 +1,101 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "Multiboard" {
+    Height  0.024,
+    Width   0.024,
+
+    Frame "GLUETEXTBUTTON" "MultiboardMinimizeButton" {
+        SetAllPoints,
+
+        ControlBackdrop "ButtonBackdropTemplate",
+        Frame "BACKDROP" "ButtonBackdropTemplate" {
+            DecorateFileNames,
+            BackdropBackground          "MultiboardMinimizeButtonEnabled",
+            BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+            BackdropCornerSize          0.0125,
+            BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+            BackdropEdgeFile            "MultiboardBorder",
+        }
+
+        ControlPushedBackdrop "ButtonPushedBackdropTemplate",
+        Frame "BACKDROP" "ButtonPushedBackdropTemplate" {
+            DecorateFileNames,
+            BackdropBackground          "MultiboardMinimizeButtonPushed",
+            BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+            BackdropCornerSize          0.0125,
+            BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+            BackdropEdgeFile            "MultiboardBorder",
+        }
+
+        ControlDisabledBackdrop "ButtonDisabledBackdropTemplate",
+        Frame "BACKDROP" "ButtonDisabledBackdropTemplate" {
+            DecorateFileNames,
+            BackdropBackground          "EscMenuButtonBackground",
+            BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+            BackdropCornerSize          0.0125,
+            BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+            BackdropEdgeFile            "MultiboardBorder",
+        }
+
+        ControlDisabledPushedBackdrop "ButtonDisabledPushedBackdropTemplate",
+        Frame "BACKDROP" "ButtonDisabledPushedBackdropTemplate" {
+            DecorateFileNames,
+            BackdropBackground          "MultiboardMinimizeButtonDisabled",
+            BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+            BackdropCornerSize          0.0125,
+            BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+            BackdropEdgeFile            "MultiboardBorder",
+        }
+    }
+
+    Frame "BACKDROP" "MultiboardTitleBackdrop" {
+        Width  0.2f,
+        //Height 0.011f,
+        SetPoint TOPRIGHT,      "MultiboardMinimizeButton", TOPLEFT,    0.0057, 0.0,
+        SetPoint BOTTOMRIGHT,   "MultiboardMinimizeButton", BOTTOMLEFT, 0.0057, 0.0,
+        UseActiveContext,
+        SetAllPoints,
+	    DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground          "MultiboardBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.0125,
+        BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+        BackdropEdgeFile            "MultiboardBorder",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "MultiboardTitle" INHERITS "EscMenuLabelTextTemplate" {
+        UseActiveContext,
+        SetPoint TOPLEFT,       "MultiboardTitleBackdrop", TOPLEFT,      0.0, 0.0,
+        SetPoint BOTTOMRIGHT,   "MultiboardTitleBackdrop", BOTTOMRIGHT,  0.0, 0.0,
+        FrameFont "MasterFont", 0.011, "",
+        FontJustificationH JUSTIFYCENTER,
+    }
+
+    Frame "BACKDROP" "MultiboardBackdrop" {
+        UseActiveContext,
+        SetPoint TOPRIGHT,  "MultiboardMinimizeButton", BOTTOMRIGHT, 0.0, 0.0057,
+        SetPoint TOPLEFT,   "MultiboardTitleBackdrop",  BOTTOMLEFT,  0.0, 0.0057,
+	    DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground          "MultiboardBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.0125,
+        BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+        BackdropEdgeFile            "MultiboardBorder",
+	    BackdropBlendAll,
+    }
+
+    Frame "FRAME" "MultiboardListContainer" {
+        UseActiveContext,
+        SetPoint TOPLEFT,       "MultiboardBackdrop",  TOPLEFT,          0.001f, -0.0048,
+        SetPoint BOTTOMRIGHT,   "MultiboardBackdrop",  BOTTOMRIGHT,     -0.001f,  0.001,
+    }
+}

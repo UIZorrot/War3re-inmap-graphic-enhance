@@ -1,0 +1,38 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "Leaderboard" {
+    Width  0.17f,
+    Height 0.2f,
+
+    Frame "BACKDROP" "LeaderboardBackdrop" {
+        UseActiveContext,
+        SetAllPoints,
+	    DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground          "EscMenuEditBoxBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.0125,
+        BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+        BackdropEdgeFile            "EscMenuEditBoxBorder",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "LeaderboardTitle" INHERITS "EscMenuLabelTextTemplate" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "LeaderboardBackdrop", TOPLEFT, 0.02, -0.015,
+        FrameFont "MasterFont", 0.011,"",
+        FontJustificationH JUSTIFYCENTER,
+    }
+
+    Frame "FRAME" "LeaderboardListContainer" {
+        UseActiveContext,
+        SetPoint TOPLEFT,       "LeaderboardTitle",     BOTTOMLEFT,     -0.02f,  -0.002,
+        SetPoint BOTTOMRIGHT,   "LeaderboardBackdrop",  BOTTOMRIGHT,     0.0f,    0.001,
+    }
+}

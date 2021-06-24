@@ -1,0 +1,126 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+
+Frame "FRAME" "CinematicPanel" {
+    SetAllPoints,
+
+    //This frame ensures that we can scroll tbe panel up and down
+    //while ensuring the code stays clean
+       Frame "FRAME" "CinematicPanelControlFrame" {
+
+		Frame "BACKDROP" "HDCinematicBackground" {
+			Width 0.8,
+			Height 0.153,
+
+			SetPoint BOTTOMLEFT, "CinematicPanel", BOTTOMLEFT, 0.0, 0.0,
+
+			DecorateFileNames,
+			BackdropBackground  "CinematicPanelBackground",
+			BackdropBlendAll,
+		}
+
+        Frame "BACKDROP" "CinematicBottomBorder" {
+            Width 0.8,
+            Height 0.14,
+
+            SetPoint BOTTOMRIGHT, "CinematicPanel", BOTTOMRIGHT, 0.0, 0.0,
+
+            DecorateFileNames,
+            BackdropTileBackground,
+            BackdropBackground  "EscMenuBackground",
+            BackdropCornerFlags "UL|UR|T",
+            BackdropCornerSize  0.04,
+            BackdropBackgroundSize  0.256,
+            BackdropBackgroundInsets 0.0 0.01 0.0 0.0,
+            BackdropEdgeFile  "CinematicBorder",
+        }
+
+        // --- The "CinematicScenePanel" is shown and hidden as there
+        //     is a cinematic scene to display.
+        Frame "FRAME" "CinematicScenePanel" {
+
+            // This is used to hide whatever is below the portrait from showing through.
+            Frame "BACKDROP" "CinematicPortraitBackground" {
+                Width 0.116,
+                Height 0.116,
+                // In HD, this gets repositioned in the code.
+                SetPoint BOTTOMLEFT, "CinematicPanel", BOTTOMLEFT, 0.014, 0.014,
+                DecorateFileNames,
+                BackdropBackground  "EscMenuBlankBackground",
+            }
+
+            // NOTE: If you change the dimensions or location of the "CinematicPortrait",
+            //       then you also need to change the above "CinematicPortraitBackground"
+            //       to match those same dimensions.
+            //       In HD, this gets repositioned in the code.
+            Frame "SPRITE" "CinematicPortrait" {
+                Width 0.116,
+                Height 0.116,
+                SetPoint BOTTOMLEFT, "CinematicPanel", BOTTOMLEFT, 0.014, 0.014,
+            }
+
+            Frame "BACKDROP" "CinematicPortraitCover" {
+                Width 0.144,
+                Height 0.144,
+
+                SetPoint BOTTOMLEFT, "CinematicPanel", BOTTOMLEFT, 0.0, 0.0,
+
+                DecorateFileNames,
+                BackdropTileBackground,
+                BackdropBackground  "EscMenuBlankBackground",
+                BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+                BackdropCornerSize  0.048,
+                BackdropBackgroundSize  0.256,
+                BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+                BackdropEdgeFile  "EscMenuBorder",
+                BackdropBlendAll,
+            }
+
+            Frame "BACKDROP" "HDCinematicPortraitCover" {
+                Width 0.144,
+                Height 0.144,
+
+                SetPoint BOTTOMLEFT, "CinematicPanel", BOTTOMLEFT, 0.005, 0.01,
+
+                DecorateFileNames,
+                BackdropBackground  "CinematicBorder",
+                BackdropBlendAll,
+            }
+
+            Frame "TEXT" "CinematicSpeakerText" INHERITS "EscMenuTitleTextTemplate" {
+                SetPoint TOPLEFT, "CinematicPortraitCover", TOPRIGHT, 0.015, -0.035,
+            }
+
+            Frame "TEXT" "CinematicDialogueText" INHERITS "EscMenuTitleTextTemplate" {
+                Width 0.6,
+                SetPoint TOPLEFT, "CinematicSpeakerText", BOTTOMLEFT, 0.0, -0.004,
+                FontColor 1.0 1.0 1.0,
+            }
+
+        }
+
+        Frame "BACKDROP" "CinematicTopBorder" {
+            Width 0.8,
+            Height 0.0275,
+
+            SetPoint TOPLEFT, "CinematicPanel", TOPLEFT, 0.0, 0.0,
+
+            DecorateFileNames,
+            BackdropTileBackground,
+            BackdropBackground  "EscMenuBackground",
+            BackdropCornerFlags "BL|BR|B",
+            BackdropCornerSize  0.04,
+            BackdropBackgroundSize  0.256,
+            BackdropBackgroundInsets 0.0 0.0 0.01 0.0,
+            BackdropEdgeFile  "CinematicBorder",
+        }
+    }
+}
+
+

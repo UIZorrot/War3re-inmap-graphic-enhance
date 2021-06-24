@@ -1,0 +1,73 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "DIALOG" "SuspendDialog" {
+    Width 0.336,
+    Height 0.432,
+
+    DialogBackdrop "SuspendBackdrop",
+    Frame "BACKDROP" "SuspendBackdrop" {
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.048,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "EscMenuBorder",
+	BackdropBlendAll,
+    }
+
+    Frame "TEXT" "SuspendTitleText" INHERITS "EscMenuInfoTextTemplate" {
+        SetPoint TOP, "SuspendDialog", TOP, 0.0, -0.03,
+        Text "WAITING_FOR_PLAYERS",
+    }
+
+    Frame "GLUETEXTBUTTON" "SuspendDropPlayersButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint BOTTOM, "SuspendDialog", BOTTOM, 0.0, 0.03,
+
+        ButtonText "SuspendDropPlayersButtonText",
+        Frame "TEXT" "SuspendDropPlayersButtonText" INHERITS "EscMenuButtonTextTemplate" {
+            Text "DROP_PLAYERS",
+        }
+    }
+
+    Frame "TEXT" "SuspendTimerText" INHERITS "EscMenuInfoTextTemplate" {
+        SetPoint BOTTOM, "SuspendDropPlayersButton", TOP, 0.0, 0.00625,
+        Height 0.018,
+    }
+}
+
+Frame "FRAME" "SuspendPlayerSlot" {
+    Width 0.219375,
+    Height 0.02,
+
+    Frame "BACKDROP" "SuspendPlayerSlotColorBackdrop" {
+        UseActiveContext,
+        SetPoint LEFT, "SuspendPlayerSlot", LEFT, 0.0, 0.0,
+        Width 0.016,
+        Height 0.016,
+
+        Frame "BACKDROP" "SuspendPlayerSlotColorBorder" {
+            UseActiveContext,
+            SetAllPoints,
+            DecorateFileNames,
+            BackdropBlendAll,
+            BackdropBackground  "EscMenuCheckBoxBackground",
+	    BackdropBackgroundInsets -0.005 -0.005 -0.005 -0.005,
+        }
+    }
+
+    Frame "TEXT" "SuspendPlayerSlotPlayerNameLabel" INHERITS "EscMenuInfoTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "SuspendPlayerSlotColorBackdrop", RIGHT, 0.00625, 0.0,
+    }
+}
+
+
