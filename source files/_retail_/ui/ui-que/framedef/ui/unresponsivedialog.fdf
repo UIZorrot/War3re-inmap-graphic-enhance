@@ -1,0 +1,40 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "DIALOG" "UnresponsiveDialog" {
+    Width 0.336,
+    Height 0.144,
+
+    DialogBackdrop "UnresponsiveBackdrop",
+    Frame "BACKDROP" "UnresponsiveBackdrop" {
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.048,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "EscMenuBorder",
+	BackdropBlendAll,
+    }
+
+    Frame "TEXT" "UnresponsiveTitleText" INHERITS "EscMenuInfoTextTemplate" {
+        SetPoint TOP, "UnresponsiveDialog", TOP, 0.0, -0.03,
+        Text "WAITING_FOR_HOST",
+    }
+
+    Frame "GLUETEXTBUTTON" "UnresponsiveDisconnectButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint BOTTOM, "UnresponsiveDialog", BOTTOM, 0.0, 0.03,
+
+        ButtonText "UnresponsiveDisconnectButtonText",
+        Frame "TEXT" "UnresponsiveDisconnectButtonText" INHERITS "EscMenuButtonTextTemplate" {
+            Text "DISCONNECT",
+        }
+    }
+}

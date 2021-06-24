@@ -1,0 +1,221 @@
+
+[Misc]
+
+FontTexture=FRIZQT__.TTF
+FontTexture:frFR=THOWR___.TTF
+FontTexture:koKR=bl.ttf
+FontTexture:plPL,ruRU=NimrodMT.ttf
+FontTexture:zhCN=dfst-m3u.ttf
+FontTexture:zhTW=arheiu20m.ttf
+
+GoldTextHeight=0.024
+LumberTextHeight=0.024
+BountyTextHeight=0.024
+LumberBountyTextHeight=0.024
+XPTextHeight=0.020
+MissTextHeight=0.024
+CriticalStrikeTextHeight=0.024
+ShadowStrikeTextHeight=0.024
+ManaBurnTextHeight=0.024
+BashTextHeight=0.024
+
+// for filtering these terms
+Profanity=
+
+// credits file
+CreditsFile_V0="Campaign\warcraftiiicredits.w3m"
+CreditsFile_V1="Campaign\FrozenThrone\war3xregularcreditsice.w3x"
+
+// quicksave filename
+QuickSaveFile=QuickSave
+
+// Splash screen params
+SplashImage="WebUI/Backgrounds/SplashScreen.tif"
+SplashImageScaleMode=2 // 0: Center Uncropped, 1: Fit Vertical, 2: Zoom to fit (works like the WebUI doors), defined in CSplashScreen.h
+
+// This section specifies which fonts you want to display in the chat
+// font menu in the options screen.  For this feature to be enabled, the
+// "ChatFontEnabled" should be set to 1.  If that value is set to 0,
+// the menu in the options screen is hidden.
+//
+// To setup the Chat Support menu, you must first set the "ChatFontCount"
+// to the number of fonts that you are going to display in the menu.
+// Then for each font place two entries: "ChatFontDisplayName<X>" and
+// "ChatFont<X>".  Where the <X> is replaced with sequential numbers from
+// 0 to (ChatFontCount - 1).  The zeroth font should be called "Default"
+// and map to the normal font which we use in the game.
+
+[ChatFonts]
+ChatFontEnabled=0
+
+ChatFontCount=5
+
+ChatFontDisplayName0="CHAT_FONT_LANG_DEFAULT"
+ChatFont0="Fonts\frizqt__.ttf"
+ChatFont0:frFR="Fonts\THOWR___.TTF"
+ChatFont0:koKR="Fonts\bl.ttf"
+ChatFont0:plPL,ruRU="Fonts\NimrodMT.ttf"
+ChatFont0:zhCN="Fonts\dfst-m3u.ttf"
+ChatFont0:zhTW="Fonts\arheiu20m.ttf"
+
+ChatFontDisplayName1="CHAT_FONT_LANG_JAPANESE"
+ChatFontDisplayName1:zhCN="CHAT_FONT_LANG_TRADITIONAL_CHINESE"
+ChatFontDisplayName1:zhTW="CHAT_FONT_LANG_SIMPLIFIED_CHINESE"
+ChatFont1="Fonts\tt5500m_.ttf"
+ChatFont1:zhCN="Fonts\arheiu20m.ttf"
+ChatFont1:zhTW="Fonts\dfst-m3u.ttf"
+
+ChatFontDisplayName2="CHAT_FONT_LANG_KOREAN"
+ChatFontDisplayName2:koKR,zhCN,zhTW="CHAT_FONT_LANG_WESTERN"
+ChatFont2="Fonts\DFKGothicMd.ttf"
+ChatFont2:koKR,zhCN,zhTW="Fonts\frizqt__.ttf"
+
+ChatFontDisplayName3="CHAT_FONT_LANG_TRADITIONAL_CHINESE"
+ChatFontDisplayName3:zhCN,zhTW="CHAT_FONT_LANG_JAPANESE"
+ChatFont3="Fonts\DFHeiLt.ttf"
+ChatFont3:zhCN,zhTW="Fonts\tt5500m_.ttf"
+
+ChatFontDisplayName4="CHAT_FONT_LANG_SIMPLIFIED_CHINESE"
+ChatFontDisplayName4:zhCN,zhTW="CHAT_FONT_LANG_KOREAN"
+ChatFont4="Fonts\dfst-m3u.ttf"
+ChatFont4:zhCN,zhTW="Fonts\DFHeiMd.ttf"
+
+[Websites]
+BattleNetLadder="http://www.battle.net/war3/ladder"
+
+// The following font heights are for text where the frame they are
+// associated with is not created through the use of FrameDef files,
+// such as when the frame is programatically created.
+//
+// To change the font height of a frame created in the FrameDef files,
+// you will need to look in the appropriate .fdf file.
+//
+// All font heights are in Frame screen units.
+
+[FontHeights]
+
+// in-game ui
+
+ToolTipName=0.011               // tooltip name (first line)
+ToolTipDesc=0.011               // tooltip description and ubertip
+ToolTipCost=0.011               // tooltip cost value
+ToolTipHotkey=0.011				// tooltip hotkey
+ChatEditBar=0.013               // chat edit bar text
+ChatHistory=0.011               // chat history area in chat dialog
+CommandButtonNumber=0.009       // little number at the bottom right of command buttons
+WorldFrameMessage=0.015         // single line of error text that appears above the console
+WorldFrameTopMessage=0.024      // large upkeep text that appears below the time of day indicator
+WorldFrameUnitMessage=0.015     // small text that is used for in-game trigger based dialog
+WorldFrameChatMessage=0.013     // in-game chat text
+Inventory=0.00001          // "Inventory" text above your inventory  
+LeaderBoard=0.011               // leader board text
+LeaderBoard:deDE=0.010
+LeaderBoard:koKR,zhCN,zhTW=0.007
+PortraitStats=0.008             // hit points and mana text below 3D unit portrait
+QuestDescription=0.011          // quest description text in Quest Dialog
+UnitTipPlayerName=0.011         // player name on unit tooltip
+UnitTipUnitName=0.011           // unit name on unit tooltip
+UnitTipDesc=0.011               // description text on unit tooltip
+CommandButtonCooldownNum=0.016  // the number over ablities on cooldown if enabled in options
+HeroFrameLevel=0.012            // small number on the hero frame, shows a hero's current level
+CheckpointReached=0.015         // checkpoint reached
+
+// glue screens
+BattleNetTeamChatTextArea=0.011 // chat display text area in the Battle.net chatroom
+BattleNetTeamChatEditBox=0.015  // chat display edit bxo in the Battle.net chatroom
+BattleNetChatTextArea=0.011     // chat display text area in the Battle.net chatroom
+BattleNetChatEditBox=0.015      // chat display edit bxo in the Battle.net chatroom
+BattleNetTournamentTimer=0.013	// next round timer on the Battle.net tournament screen
+ChatRoomButtonText=0.007        // button text for chatroom buttons
+ChatroomTextArea=0.011          // chat display text area in the pre-game chatroom
+ChatroomChatEditBox=0.015       // chat display edit box in the pre-game chatroom
+ChatroomHeaders=0.011           // team headers in the pre-game chatroom
+BattleNetChatActionMenu=0.011   // items in the right-click context menu in Battle.net
+BattleNetNewsBox=0.011          // Battle.net news items
+BattleNetUserListName=0.011     // b.net userlist name
+BattleNetUserListLevel=0.011    // b.net userlist level
+CheckBoxList=0.013              // check box list item text
+GlueToolTip=0.011               // glue screen tooltip
+ListBoxItem=0.013               // list box item text
+LoadingTeamHeader=0.011         // loading screen team header text
+MapListBoxMaxPlayers=0.009      // map list max players text
+MapListBoxItem=0.013            // map list item text
+MapPreferenceMaxPlayers=0.009   // map preference max players text
+MapPreferenceItem=0.013         // map preference max item text
+ScoreScreenNormal=0.011         // score screen normal text
+ScoreScreenLarge=0.011          // score screen large text
+ScoreScreenTeam=0.009           // score screen team number text
+CampaignItemHeader=0.011        // campaign item header on campaign screen
+CampaignItemName=0.015          // campaign item name on campaign screen
+CampaignItemName:deDE=0.014
+CampaignItemName:itIT=0.013
+
+[Hotkeys]
+QuickSave='S'           // Alt-S
+QuickLoad='L'           // Alt-L
+QuickHelp='H'           // Alt-H
+QuickOptions='O'        // Alt-O
+QuickQuit='Q'           // Alt-Q
+MusicToggle='M'         // Ctrl-M
+SfxToggle='S'           // Ctrl-S
+UnitCenter='C'          // Ctrl-C and Alt-C
+MinimapSignal='G'       // Alt-G
+MinimapSignal:esES='N'
+MinimapTerrain='T'      // Alt-T
+MinimapTerrain:deDE='K'
+MinimapColors='A'       // Alt-A
+MinimapCreeps='R'       // Alt-R
+FormationToggle='F'     // Alt-F
+
+// hotkeys for scripted dialogs
+// NOTE: these need to match the "higlighted" chars
+// in the scripted dialog button text ( e.g. (L)oad )
+//
+// These hotkey identifier match the localized string
+// identifier that they are associated with in GlobalStrings.fdf.
+//
+GAMEOVER_CONTINUE='C'
+GAMEOVER_CONTINUE:deDE='W'
+GAMEOVER_CONTINUE:plPL='K'
+GAMEOVER_CONTINUE_GAME='C'
+GAMEOVER_CONTINUE_GAME:deDE='R'
+GAMEOVER_CONTINUE_GAME:plPL='K'
+GAMEOVER_CONTINUE_OBSERVING='O'
+GAMEOVER_QUIT_GAME='Q'
+GAMEOVER_QUIT_GAME:deDE='B'
+GAMEOVER_QUIT_GAME:itIT='S'
+GAMEOVER_QUIT_GAME:plPL='Z'
+GAMEOVER_OK='O'
+GAMEOVER_QUIT_MISSION='Q'
+GAMEOVER_QUIT_MISSION:deDE='B'
+GAMEOVER_QUIT_MISSION:esES,itIT='A'
+GAMEOVER_QUIT_MISSION:plPL='Z'
+GAMEOVER_RESTART='R'
+GAMEOVER_REDUCE_DIFFICULTY='D'
+GAMEOVER_REDUCE_DIFFICULTY:deDE='C'
+GAMEOVER_REDUCE_DIFFICULTY:plPL='T'
+GAMEOVER_LOAD='L'
+GAMEOVER_LOAD:frFR='H'
+GAMEOVER_LOAD:itIT='C'
+GAMEOVER_LOAD:plPL='W'
+
+// These keys follow the same instructions as above, but are
+// not actually used for any scripted dialogs.  These are for
+// special cases where we had conflicting hotkeys, and we
+// needed to map/remap keys during runtime.
+KEY_DELETE='D'
+KEY_DELETE:deDE='N'
+KEY_DELETE:esES,itIT='L'
+KEY_DELETE:frFR='F'
+KEY_DELETE:plPL='U'
+KEY_CANCEL='A'
+KEY_CANCEL:itIT='N'
+KEY_ACCEPT='A'
+KEY_ACCEPT:plPL='Z'
+KEY_DECLINE='D'
+KEY_DECLINE:deDE='B'
+KEY_ENTERCHAT='C'
+KEY_ENTERCHAT:deDE='E'
+KEY_ENTERCHAT:esES,itIT='H'
+KEY_ENTERCHAT:frFR='M'
+KEY_CLANTAB='C'

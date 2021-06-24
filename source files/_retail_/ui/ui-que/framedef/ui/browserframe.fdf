@@ -1,0 +1,11 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BrowserFrame" INHERITS "StandardFrameTemplate" {
+    SetAllPoints,
+}

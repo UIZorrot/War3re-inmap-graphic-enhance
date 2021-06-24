@@ -1,0 +1,999 @@
+[FoliageGlobal]
+Displacement=1
+AO=1
+AmbientOcclusion=1
+Occlusion=1
+
+// Ashenvale Dirt Rough
+[Adrd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Ashenvale Dirt Grass
+[Adrg]
+Density=.5,.5,.5
+FoliageSnap=45,45,45
+Model=Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_00.mdl,Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_01.mdl,Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_02
+WindStrength=25,25,25
+
+// Ashenvale Dirt
+[Adrt]
+Density=.25,.25,.5,.25,.5,.25,.25
+FoliageSnap=45,45,45,15,15,15,15
+Model=Environment/Foliage/Ashenvale/Dirt/Foliage_AV_RockWeeds_00.mdl,Environment/Foliage/Ashenvale/Dirt/Foliage_AV_RockWeeds_01.mdl,Environment/Foliage/Ashenvale/Dirt/Foliage_AV_RockWeeds_02.mdl,Environment/Foliage/Ashenvale/Dirt/Foliage_AV_RockWeeds_03.mdl,Environment/Foliage/Ashenvale/Dirt/Foliage_AV_RockWeeds_04.mdl,Environment/Foliage/Ashenvale/Dirt/Foliage_AV_RockWeeds_05.mdl,Environment/Foliage/Ashenvale/Dirt/Foliage_AV_RockWeeds_06.mdl
+WindStrength=0,0,0,25,15,15,15
+
+// Ashenvale Grass Lumpy
+[Agrd]
+Density=11,11,11,11
+FoliageSnap=60,60,60,60
+Model=Environment/Foliage/Ashenvale/GrassLumpy/Foliage_AV_GrassLumpy_00.mdl,Environment/Foliage/Ashenvale/GrassLumpy/Foliage_AV_GrassLumpy_01.mdl,Environment/Foliage/Ashenvale/GrassLumpy/Foliage_AV_GrassLumpy_02.mdl,Environment/Foliage/Ashenvale/GrassLumpy/Foliage_AV_GrassLumpy_03.mdl
+WindStrength=0,0,0,0
+
+// Ashenvale Grass
+[Agrs]
+Density=10,10,10,1,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_00.mdl,Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_01.mdl,Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_02.mdl,Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_03.mdl,Environment/Foliage/Ashenvale/Grass/Foliage_AV_Grass_04.mdl
+WindStrength=25,25,25,25,25
+
+// Ashenvale Leaves
+[Alvd]
+Density=3,3,5,3
+FoliageSnap=60,60,60,60
+Model=Environment/Foliage/Ashenvale/Leaves/Foliage_AV_Leaves_00.mdl,Environment/Foliage/Ashenvale/Leaves/Foliage_AV_Leaves_01.mdl,Environment/Foliage/Ashenvale/Leaves/Foliage_AV_Leaves_02.mdl,Environment/Foliage/Ashenvale/Leaves/Foliage_AV_Leaves_03.mdl
+WindStrength=0,0,0,0
+
+// Ashenvale Rock
+[Arck]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Ashenvale Vines
+[Avin]
+Density=1,1,1
+FoliageSnap=45,45,45
+Model=Environment/Foliage/Ashenvale/Vines/Foliage_AV_Vines_00.mdl,Environment/Foliage/Ashenvale/Vines/Foliage_AV_Vines_01.mdl,Environment/Foliage/Ashenvale/Vines/Foliage_AV_Vines_02.mdl
+WindStrength=0,0,0
+
+// Barrens Dirt Grass
+[Bdrg]
+Density=2,2,2
+FoliageSnap=45,45,45
+Model=Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_00.mdl,Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_01.mdl,Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_02.mdl
+WindStrength=35,35,35
+
+// Barrens Dirt Rough 
+[Bdrh]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Barrens Pebbles
+[Bdrr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Barrens Dirt
+[Bdrt]
+Density=.1,.1,.1,.25,.25,.25,.25
+FoliageSnap=100,100,100,45,45,45,45
+Model=Environment/Foliage/Barrens/Dirt/Foliage_BR_RockWeeds_00,Environment/Foliage/Barrens/Dirt/Foliage_BR_RockWeeds_01,Environment/Foliage/Barrens/Dirt/Foliage_BR_RockWeeds_02,Environment/Foliage/Barrens/Dirt/Foliage_BR_RockWeeds_03,Environment/Foliage/Barrens/Dirt/Foliage_BR_RockWeeds_04,Environment/Foliage/Barrens/Dirt/Foliage_BR_RockWeeds_05,Environment/Foliage/Barrens/Dirt/Foliage_BR_RockWeeds_06
+WindStrength=0,0,0,35,35,35,35
+
+// Barrens Desert Dark
+[Bdsd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Barrens Desert
+[Bdsr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Barrens Rock
+[Bflr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Barrens Grass
+[Bgrr]
+Density=11,11,11,1,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_00.mdl,Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_01.mdl,Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_02.mdl,Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_03.mdl,Environment/Foliage/Barrens/Grass/Foliage_BR_Grass_04.mdl
+WindStrength=35,35,35,35,35
+
+// Felwood Dirt Rough
+[Cdrd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Felwood Dirt
+[Cdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Felwood Grass
+[Cgrs]
+Density=5,5,5,1,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/Felwood/Grass/Foliage_FW_Grass_00.mdl,Environment/Foliage/Felwood/Grass/Foliage_FW_Grass_01.mdl,Environment/Foliage/Felwood/Grass/Foliage_FW_Grass_02.mdl,Environment/Foliage/Felwood/Grass/Foliage_FW_Grass_03.mdl,Environment/Foliage/Felwood/Grass/Foliage_FW_Grass_04.mdl
+WindStrength=35,35,35,35,35
+
+// Felwood Leaves
+[Clvg]
+Density=3,3,3,3,3
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/Felwood/Leaves/Foliage_FW_Leaves_00.mdl,Environment/Foliage/Felwood/Leaves/Foliage_FW_Leaves_01.mdl,Environment/Foliage/Felwood/Leaves/Foliage_FW_Leaves_02.mdl,Environment/Foliage/Felwood/Leaves/Foliage_FW_Leaves_03.mdl
+WindStrength=35,35,35,35,35
+
+// Felwood Poison
+[Cpos]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Felwood Rock
+[Crck]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Felwood Vines
+[Cvin]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dungeon Brick
+[Dbrk]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dungeon Dark Rocks
+[Ddkr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dungeon Dirt
+[Ddrt]
+Density=1,.5,.5
+FoliageSnap=100,100,100
+Model=Environment/Foliage/Dungeon/Dirt/Foliage_DG_Rocks_00.mdl,Environment/Foliage/Dungeon/Dirt/Foliage_DG_Rocks_01.mdl,Environment/Foliage/Dungeon/Dirt/Foliage_DG_Rocks_02.mdl
+WindStrength=0,0,0
+
+// Dungeon Grey Stones
+[Dgrs]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dungeon Lava
+[Dlav]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dungeon Lava Cracks
+[Dlvc]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dungeon Red Stones
+[Drds]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dungeon Square Tiles
+[Dsqd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Fall Dirt Grass
+[Fdrg]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Fall Dirt Rough
+[Fdro]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Fall Dirt
+[Fdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Fall Grass Dark
+[Fgrd]
+Density=6,6,6,1,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/LordaeronFall/GrassDark/Foliage_LF_GrassDark_00.mdl,Environment/Foliage/LordaeronFall/GrassDark/Foliage_LF_GrassDark_01.mdl,Environment/Foliage/LordaeronFall/GrassDark/Foliage_LF_GrassDark_02.mdl,Environment/Foliage/LordaeronFall/GrassDark/Foliage_LF_GrassDark_03.mdl,Environment/Foliage/LordaeronFall/GrassDark/Foliage_LF_GrassDark_04.mdl
+WindStrength=35,35,35,35,35
+
+// Lordaeron Fall Grass
+[Fgrs]
+Density=8,8,8,8,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_00.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_01.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_02.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_03.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_04.mdl
+WindStrength=35,35,35,35,35
+
+// Lordaeron Fall Rock
+[Frok]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Underground Brick
+[Gbrk]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Underground Dark Rocks
+[Gdkr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Underground Dirt
+[Gdrt]
+Density=2,1,1
+FoliageSnap=100,100,100
+Model=Environment/Foliage/Underground/Dirt/Foliage_UG_Dirt_00.mdl,Environment/Foliage/Underground/Dirt/Foliage_UG_Dirt_01.mdl,Environment/Foliage/Underground/Dirt/Foliage_UG_Dirt_02.mdl
+WindStrength=0,0,0
+
+// Underground Grey Stones
+[Ggrs]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Underground Lava
+[Glav]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Underground Lava Cracks
+[Glvc]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Underground Red Stones
+[Grds]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Underground Square Tiles
+[Gsqd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Icecrown Black Bricks
+[Ibkb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Icecrown Black Squares
+[Ibsq]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Icecrown Dark Ice
+[Idki]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Icecrown Dirt
+[Idrt]
+Density=.3,.3,.3
+FoliageSnap=100,100,100
+Model=Environment/Foliage/IceCrown/Dirt/Foliage_ICG_Dirt_00.mdl,Environment/Foliage/IceCrown/Dirt/Foliage_ICG_Dirt_01.mdl,Environment/Foliage/IceCrown/Dirt/Foliage_ICG_Dirt_02.mdl,
+WindStrength=0,0,0
+
+// Icecrown Dirt Rough
+[Idtr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Icecrown Ice
+[Iice]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+//Icecrown Rune Bricks
+[Irbk]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Icecrown Snow
+[Isnw]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Icecrown Tiled Bricks
+[Itbk]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins Black Marble
+[Jblm]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins Brick Tiles
+[Jbtl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins Dirt
+[Jdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins Dirt Rough
+[Jdtr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins Grass
+[Jgsb]
+Density=10,10,10,1,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/DalaranRuins/Grass/Foliage_DLR_Grass_00.mdl,Environment/Foliage/DalaranRuins/Grass/Foliage_DLR_Grass_01.mdl,Environment/Foliage/DalaranRuins/Grass/Foliage_DLR_Grass_02.mdl,Environment/Foliage/DalaranRuins/Grass/Foliage_DLR_Grass_03.mdl,Environment/Foliage/DalaranRuins/Grass/Foliage_DLR_Grass_04.mdl
+WindStrength=35,35,35,35,35
+
+// Dalaran Ruins Grass Trim
+[Jhdg]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins Round Tiles
+[Jrtl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins Square Tiles
+[Jsqd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Ruins White Marble
+[Jwmb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Dark Tiles
+[Kdkt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Dirt
+[Kdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Dirt Rough
+[Kdtr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Dirt Light
+[Kfsl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Flat Stones
+[Kfst]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Large Bricks
+[Klgb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Small Bricks
+[Ksmb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Black Citadel Square Tiles
+[Ksqt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Summer Dirt Grass
+[Ldrg]
+Density=0,2,0
+FoliageSnap=100,100,100
+Model=Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_00.mdl,Environment/Foliage/LordaeronSummer/Grass/lords_rock0.mdx,Environment/Foliage/LordaeronSummer/Rocks/Foliage_LS_Rocks_02.mdl
+WindStrength=0,0,0
+
+// Lordaeron Summer Dirt Rough
+[Ldro]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Summer Dirt
+[Ldrt]
+Density=.5,.5,.5
+FoliageSnap=100,100,100
+Model=Environment/Foliage/LordaeronSummer/Rocks/Foliage_LS_Rocks_00.mdl,Environment/Foliage/LordaeronSummer/Rocks/Foliage_LS_Rocks_01.mdl,Environment/Foliage/LordaeronSummer/Rocks/Foliage_LS_Rocks_02.mdl
+WindStrength=0,0,0
+
+// Lordaeron Summer Grass Dark
+[Lgrd]
+Density=8,8,6,6,6,4
+FoliageSnap=45,45,45,45,45,45
+Model=Environment/Foliage/LordaeronSummer/GrassDark/Foliage_LS_GrassDark_00.mdl,Environment/Foliage/LordaeronSummer/GrassDark/Foliage_LS_GrassDark_01.mdl,Environment/Foliage/LordaeronSummer/GrassDark/Foliage_LS_GrassDark_02.mdl,Environment/Foliage/LordaeronSummer/GrassDark/Foliage_LS_GrassDark_03.mdl,Environment/Foliage/LordaeronSummer/GrassDark/Foliage_LS_GrassDark_04.mdl,Environment/Foliage/LordaeronSummer/Grass/lords_rock0.mdx
+WindStrength=55,55,55,55,25,25
+
+// Lordaeron Summer Grass
+[Lgrs]
+Density=8,8,5,5,5,2
+FoliageSnap=45,45,45,45,45,45
+Model=Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_00.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_01.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_02.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_03.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_04.mdl,Environment/Foliage/LordaeronSummer/Grass/lords_rock0.mdx
+WindStrength=100,20,20,20,20,20
+
+// Lordaeron Summer Rock
+[Lrok]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Northrend Dirt Dark
+[Ndrd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Northrend Dirt
+[Ndrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Northrend Grass
+[Ngrs]
+Density=.2,.2,.2,8,.2,.2,.5
+FoliageSnap=45,45,45,45,45,45,45,45
+Model=Environment/Foliage/Northrend/Grass/Foliage_NR_Grass_00.mdl,Environment/Foliage/Northrend/Grass/Foliage_NR_Grass_01.mdl,Environment/Foliage/Northrend/Grass/Foliage_NR_Grass_02.mdl,Environment/Foliage/Northrend/Grass/Foliage_NR_Grass_03.mdl,Environment/Foliage/Northrend/Grass/Foliage_NR_Grass_04.mdl,Environment/Foliage/Northrend/Grass/Foliage_NR_Grass_05.mdl,Environment/Foliage/Northrend/Grass/Foliage_NR_Grass_06.mdl
+WindStrength=0,0,0,35,35,35,35
+
+// Northrend Ice
+[Nice]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Northrend Rock
+[Nrck]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Northrend Snow Rock
+[Nsnr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Northrend Snow
+[Nsnw]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Outland Abyss
+[Oaby]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Outland Dirt
+[Odrt]
+Density=.5,.5,.5,.2,.2,.2,.2
+FoliageSnap=100,100,100,45,45,45,45
+Model=Environment/Foliage/Outland/Dirt/Foliage_OL_Rock_00.mdl,Environment/Foliage/Outland/Dirt/Foliage_OL_Rock_01.mdl,Environment/Foliage/Outland/Dirt/Foliage_OL_Rock_02.mdl,Environment/Foliage/Outland/Dirt/Foliage_OL_Rock_03.mdl,Environment/Foliage/Outland/Dirt/Foliage_OL_Rock_04.mdl,Environment/Foliage/Outland/Dirt/Foliage_OL_Rock_05.mdl,Environment/Foliage/Outland/Dirt/Foliage_OL_Rock_06.mdl
+WindStrength=0,0,0,35,35,35,35
+
+// Outland Dirt Light
+[Odtr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Outland Flat Stones Light
+[Ofsl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Outland Dirt Cracked
+[Ofst]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Outland Flat Stones
+[Olgb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Outland Rock
+[Orok]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Outland Rough Dirt
+[Osmb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Fall Cobble Path
+[Qcbp]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Fall Crops
+[Qcrp]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Fall Dirt Rough
+[Qdrr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Fall Dirt
+[Qdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Fall Grass Short
+[Qgrs]
+Density=3,3,3
+FoliageSnap=45,45,45
+Model=Environment/Foliage/VillageFall/GrassThick/Foliage_VLF_GrassThick_00.mdl,Environment/Foliage/VillageFall/GrassThick/Foliage_VLF_GrassThick_01.mdl,Environment/Foliage/VillageFall/GrassThick/Foliage_VLF_GrassThick_02.mdl
+WindStrength=35,35,35
+
+// Village Fall Grass Thick
+[Qgrt]
+Density=8,8,8,8,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_00.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_01.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_02.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_03.mdl,Environment/Foliage/LordaeronFall/Grass/Foliage_LF_Grass_04.mdl
+WindStrength=35,35,35,35,35
+
+// Village Fall Rocks
+[Qrck]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Fall Stone Path
+[Qstp]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Cobble Path
+[Vcbp]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Crops
+[Vcrp]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Dirt Rough
+[Vdrr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Dirt
+[Vdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Grass Short
+[Vgrs]
+Density=2,2,2,2,2,1
+FoliageSnap=45,45,45,45,45,45
+Model=Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_00.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_01.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_02.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_03.mdl,Environment/Foliage/LordaeronSummer/Grass/Foliage_LS_Grass_04.mdl,Environment/Foliage/LordaeronSummer/Grass/lords_rock0.mdx
+WindStrength=100,20,20,20,20,20
+
+// Village Grass Thick
+[Vgrt]
+Density=8,8,7,7,7,3
+FoliageSnap=45,45,45,45,45,45
+Model=Environment/Foliage/LordaeronSummer/Grass/s_00.mdl,Environment/Foliage/LordaeronSummer/Grass/s_01.mdl,Environment/Foliage/LordaeronSummer/Grass/s_02.mdl,Environment/Foliage/LordaeronSummer/Grass/s_03.mdl,Environment/Foliage/LordaeronSummer/Grass/s_04.mdl,Environment/Foliage/LordaeronSummer/Grass/lords_rock0.mdx
+WindStrength=100,20,20,20,20,20
+
+// Village Rocks
+[Vrck]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Village Stone Path
+[Vstp]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Winter Dirt Rough
+[Wdro]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Winter Dirt
+[Wdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Winter Grass
+[Wgrs]
+Density=8,8,7,7,3
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/LordaeronWinter/Grass/Foliage_LW_Grass_00.mdl,Environment/Foliage/LordaeronWinter/Grass/Foliage_LW_Grass_01.mdl,Environment/Foliage/LordaeronWinter/Grass/Foliage_LW_Grass_02.mdl,Environment/Foliage/LordaeronWinter/Grass/Foliage_LW_Grass_03.mdl,Environment/Foliage/LordaeronSummer/Grass/lords_rock0.mdx
+WindStrength=35,35,35,35,15
+
+// Lordaeron Winter Rock
+[Wrok]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Winter Snow Grass
+[Wsng]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Lordaeron Winter Snow
+[Wsnw]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Black Marble
+[Xblm]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Brick Tiles
+[Xbtl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Dirt
+[Xdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Dirt Rough
+[Xdtr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Grass
+[Xgsb]
+Density=10,10,10,1,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/Dalaran/Grass/Foliage_DL_Grass_00.mdl,Environment/Foliage/Dalaran/Grass/Foliage_DL_Grass_01.mdl,Environment/Foliage/Dalaran/Grass/Foliage_DL_Grass_02.mdl,Environment/Foliage/Dalaran/Grass/Foliage_DL_Grass_03.mdl,Environment/Foliage/Dalaran/Grass/Foliage_DL_Grass_04.mdl
+WindStrength=35,35,35,35,35
+
+// Dalaran Grass Trim
+[Xhdg]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Round Tiles
+[Xrtl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran Square Tiles
+[Xsqd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Dalaran White Marble
+[Xwmb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape Black Marble
+[Yblm]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape Brick Tiles
+[Ybtl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape Dirt
+[Ydrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape Dirt Rough
+[Ydtr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape Grass
+[Ygsb]
+Density=6,6,6,4,4,4
+FoliageSnap=1,1,111,111,111,25
+Model=Environment/Foliage/Cityscape/Grass/Foliage_CS_Grass_00.mdl,Environment/Foliage/Cityscape/Grass/Foliage_CS_Grass_01.mdl,Environment/Foliage/Cityscape/Grass/Foliage_CS_Grass_02.mdl,Environment/Foliage/Cityscape/Grass/Foliage_CS_Grass_03.mdl,Environment/Foliage/Cityscape/Grass/Foliage_CS_Grass_04.mdl,Environment/Foliage/LordaeronSummer/Grass/lords_rock0.mdx
+WindStrength=32,33,33,33,33,0
+
+// Cityscape Grass Trim
+[Yhdg]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape Round Tiles
+[Yrtl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape Square Tiles
+[Ysqd]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Cityscape White Marble
+[Ywmb]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Large Bricks
+[Zbkl]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Small Bricks
+[Zbks]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Dirt Grass
+[Zdrg]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Dirt
+[Zdrt]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Dirt Rough
+[Zdtr]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Grass
+[Zgrs]
+Density=15,15,15,3,3
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/SunkenRuins/Grass/Foliage_SR_Grass_00.mdl,Environment/Foliage/SunkenRuins/Grass/Foliage_SR_Grass_01.mdl,Environment/Foliage/SunkenRuins/Grass/Foliage_SR_Grass_02.mdl,Environment/Foliage/SunkenRuins/Grass/Foliage_SR_Grass_03.mdl,Environment/Foliage/SunkenRuins/Grass/Foliage_SR_Grass_04.mdl
+WindStrength=35,35,35,35,35
+
+// Sunken Ruins Sand
+[Zsan]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Round Tiles
+[Ztil]
+Density=0
+FoliageSnap=0
+Model=
+WindStrength=0
+
+// Sunken Ruins Grass Dark
+[Zvin]
+Density=10,10,10,1,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/SunkenRuins/GrassDark/Foliage_SR_GrassDark_00.mdl,Environment/Foliage/SunkenRuins/GrassDark/Foliage_SR_GrassDark_01.mdl,Environment/Foliage/SunkenRuins/GrassDark/Foliage_SR_GrassDark_02.mdl,Environment/Foliage/SunkenRuins/GrassDark/Foliage_SR_GrassDark_03.mdl,Environment/Foliage/SunkenRuins/GrassDark/Foliage_SR_GrassDark_04.mdl
+WindStrength=35,35,35,35,35
+
+// Blight for all tilesets
+[blig]
+Density=.5,.5,.25,.5,1
+FoliageSnap=45,45,45,45,45
+Model=Environment/Foliage/Blight/Bones/Foliage_Blight_Bone_00.mdl,Environment/Foliage/Blight/Bones/Foliage_Blight_Bone_01.mdl,Environment/Foliage/Blight/Bones/Foliage_Blight_Bone_02.mdl,Environment/Foliage/Blight/Bones/Foliage_Blight_Bone_03.mdl,Environment/Foliage/Blight/Bones/Foliage_Blight_Bone_04.mdl
+WindStrength=0

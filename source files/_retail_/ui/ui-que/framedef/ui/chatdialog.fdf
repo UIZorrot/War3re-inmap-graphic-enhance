@@ -1,0 +1,154 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "ChatDialog" {
+    Width 0.384f,
+    Height 0.432f,
+
+    Frame "BACKDROP" "ChatBackdrop" {
+        SetAllPoints,
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.048,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "EscMenuBorder",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "ChatTitle" INHERITS "EscMenuTitleTextTemplate" {
+        SetPoint TOP, "ChatDialog", TOP, 0.0, -0.03,
+        FontJustificationH JUSTIFYCENTER,
+        Text "MESSAGING",
+    }
+
+    // --- radio buttons
+    Frame "GLUECHECKBOX" "ChatPlayerRadioButton" INHERITS WITHCHILDREN "EscMenuRadioButtonTemplate" {        
+        SetPoint TOPLEFT, "ChatDialog", TOPLEFT, 0.035, -0.070375,
+    }
+    Frame "GLUECHECKBOX" "ChatAlliesRadioButton" INHERITS WITHCHILDREN "EscMenuRadioButtonTemplate" {        
+        SetPoint TOP, "ChatPlayerRadioButton", BOTTOM, 0.0, -0.012,
+    }
+    Frame "GLUECHECKBOX" "ChatObserversRadioButton" INHERITS WITHCHILDREN "EscMenuRadioButtonTemplate" {        
+        SetPoint TOP, "ChatAlliesRadioButton", BOTTOM, 0.0, -0.002,
+    }
+    Frame "GLUECHECKBOX" "ChatEveryoneRadioButton" INHERITS WITHCHILDREN "EscMenuRadioButtonTemplate" {        
+        SetPoint TOP, "ChatObserversRadioButton", BOTTOM, 0.0, -0.002,
+    }
+
+    // --- labels
+    Frame "TEXT" "ChatPlayerLabel" INHERITS "EscMenuInfoTextTemplate" {
+        FontColor 0.99 0.827 0.0705 1.0,
+        SetPoint LEFT, "ChatPlayerRadioButton", RIGHT, 0.005, 0.0,
+        Text "COLON_SEND_TO_PLAYER",
+    }
+    Frame "TEXT" "ChatAlliesLabel" INHERITS "EscMenuInfoTextTemplate" {
+        FontColor 0.99 0.827 0.0705 1.0,
+        SetPoint LEFT, "ChatAlliesRadioButton", RIGHT, 0.005, 0.0,
+        Text "SEND_TO_ALLIES",
+    }
+    Frame "TEXT" "ChatObserversLabel" INHERITS "EscMenuInfoTextTemplate" {
+        FontColor 0.99 0.827 0.0705 1.0,
+        SetPoint LEFT, "ChatObserversRadioButton", RIGHT, 0.005, 0.0,
+        Text "SEND_TO_OBSERVERS",
+    }
+    Frame "TEXT" "ChatEveryoneLabel" INHERITS "EscMenuInfoTextTemplate" {
+        FontColor 0.99 0.827 0.0705 1.0,
+        SetPoint LEFT, "ChatEveryoneRadioButton", RIGHT, 0.005, 0.0,
+        Text "SEND_TO_EVERYONE",
+    }
+
+    // --- player menu
+    Frame "POPUPMENU" "ChatPlayerMenu" {
+        Width 0.19625,
+        Height 0.03,
+        PopupButtonInset 0.01,
+        SetPoint RIGHT, "ChatDialog", TOPRIGHT, -0.031, -0.0765,
+
+        ControlBackdrop "EscMenuPopupMenuBackdropTemplate",
+        Frame "BACKDROP" "EscMenuPopupMenuBackdropTemplate" INHERITS "EscMenuButtonBackdropTemplate" {
+        }
+
+        ControlDisabledBackdrop "EscMenuPopupMenuDisabledBackdropTemplate",
+        Frame "BACKDROP" "EscMenuPopupMenuDisabledBackdropTemplate" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+        }
+
+        PopupTitleFrame "PopupMenuTitleTemplate",
+        Frame "GLUETEXTBUTTON" "PopupMenuTitleTemplate" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+        }
+
+        PopupArrowFrame "PopupMenuArrowTemplate",
+        Frame "BUTTON" "PopupMenuArrowTemplate" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+        }
+
+        PopupMenuFrame "PopupMenuMenuTemplate",
+        Frame "MENU" "PopupMenuMenuTemplate" INHERITS WITHCHILDREN "EscMenuPopupMenuMenuTemplate" {
+        }
+    }
+
+    // --- bottom controls
+    Frame "GLUETEXTBUTTON" "ChatAcceptButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        Width 0.13,
+        SetPoint BOTTOM, "ChatDialog", BOTTOM, 0.0, 0.03,
+
+        ButtonText "ChatAcceptButtonText",
+	    Frame "TEXT" "ChatAcceptButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "OK",
+	    }        
+    }
+
+    // --- chat history
+    Frame "BACKDROP" "ChatHistoryDisplayBackdrop" {
+        Width 0.32,
+        Height 0.1475,
+        SetPoint BOTTOM, "ChatAcceptButton", TOP, 0.0, 0.04875,
+
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuEditBoxBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.0125,
+        BackdropBackgroundSize  0.256,
+        BackdropBackgroundInsets 0.005 0.005 0.005 0.005,
+        BackdropEdgeFile  "EscMenuEditBoxBorder",
+	    BackdropBlendAll,
+
+        Frame "TEXTAREA" "ChatHistoryDisplay" {
+            Height 0.1325,
+            Width 0.30675,
+            SetPoint LEFT, "ChatHistoryDisplayBackdrop", LEFT, 0.00725, -0.000625,
+
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            TextAreaLineGap 0.0015,
+            TextAreaMaxLines 128,
+            TextAreaLineHeight 0.01,
+            TextAreaInset 0.002,
+
+            TextAreaScrollBar "ChatHistoryScrollBar",
+            Frame "SCROLLBAR" "ChatHistoryScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+            }
+        }
+    }
+
+    Frame "TEXT" "ChatHistoryLabel" INHERITS "EscMenuInfoTextTemplate" {
+        FontColor 0.99 0.827 0.0705 1.0,
+        SetPoint BOTTOMLEFT, "ChatHistoryDisplayBackdrop", TOPLEFT, 0.0, 0.005,
+        Text "CHAT_HISTORY",
+    }
+
+    Frame "TEXT" "ChatInfoText" INHERITS "EscMenuInfoTextTemplate" {
+        Width 0.32,
+        SetPoint TOP, "ChatHistoryDisplayBackdrop", BOTTOM, 0.0, -0.00825,
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYLEFT,
+        Text "CHAT_INFO_TEXT",
+    }
+}

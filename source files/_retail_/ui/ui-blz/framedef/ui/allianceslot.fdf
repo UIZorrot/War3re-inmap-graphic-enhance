@@ -1,0 +1,96 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "AllianceSlot" {
+    Height 0.024,
+    Width  0.528,
+
+    Frame "BACKDROP" "ColorBackdrop" {
+        UseActiveContext,
+        SetPoint LEFT, "AllianceSlot", LEFT, 0.015, 0.0,
+        Height 0.016,
+        Width 0.016,
+
+        Frame "BACKDROP" "ColorBorder" {
+            UseActiveContext,
+            SetAllPoints,
+            DecorateFileNames,
+            BackdropBlendAll,
+            BackdropBackground  "EscMenuCheckBoxBackground",
+	    BackdropBackgroundInsets -0.005 -0.005 -0.005 -0.005,
+        }
+    }
+
+    Frame "TEXT" "PlayerNameLabel" INHERITS "EscMenuTitleTextTemplate" {
+        UseActiveContext,
+		Width 0.205,
+        SetPoint LEFT, "ColorBackdrop", RIGHT, 0.00625, 0.0,
+    }
+
+    Frame "GLUECHECKBOX" "AllyCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "ColorBackdrop", RIGHT, 0.21, 0.0,
+        Height 0.024,
+        Width 0.024,
+    }
+
+    Frame "GLUECHECKBOX" "VisionCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "AllyCheckBox", RIGHT, 0.026, 0.0,
+        Height 0.024,
+        Width 0.024,
+    }
+
+    Frame "GLUECHECKBOX" "UnitsCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "VisionCheckBox", RIGHT, 0.026, 0.0,
+        Height 0.024,
+        Width 0.024,
+    }
+
+    Frame "BACKDROP" "GoldBackdrop" {
+        Height 0.024,
+        Width 0.048,
+        UseActiveContext,
+        SetPoint LEFT, "UnitsCheckBox", RIGHT, 0.03, 0.0,
+        DecorateFileNames,
+        BackdropBackground  "AllianceGold",
+        BackdropBlendAll,
+
+        Frame "TEXT" "GoldText" INHERITS "EscMenuLabelTextTemplate" {            
+            UseActiveContext,
+            SetPoint RIGHT, "GoldBackdrop", RIGHT, -0.007, -0.001,
+            Height 0.024,
+            Width 0.048,
+            FontJustificationH JUSTIFYRIGHT,
+            FontJustificationV JUSTIFYMIDDLE,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+    }
+
+
+    Frame "BACKDROP" "LumberBackdrop" {
+        Height 0.024,
+        Width 0.048,
+        UseActiveContext,
+        SetPoint LEFT, "GoldBackdrop", RIGHT, 0.01, 0.0,
+        DecorateFileNames,
+        BackdropBackground  "AllianceLumber",
+        BackdropBlendAll,
+
+        Frame "TEXT" "LumberText" INHERITS "EscMenuLabelTextTemplate" {
+            UseActiveContext,
+            SetPoint RIGHT, "LumberBackdrop", RIGHT, -0.007, -0.001,
+            Height 0.024,
+            Width 0.048,
+            FontJustificationH JUSTIFYRIGHT,
+            FontJustificationV JUSTIFYMIDDLE,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+    }
+}

@@ -1,0 +1,330 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+Frame "BACKDROP" "QuestButtonBaseTemplate" {
+    DecorateFileNames,
+    BackdropTileBackground,
+    BackdropBackground  "QuestDialogNormalBackground",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize          0.0125,
+    BackdropBackgroundSize      0.128,
+    BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+    BackdropEdgeFile  "QuestDialogNormalBorder",
+}
+
+Frame "BACKDROP" "QuestButtonBackdropTemplate" INHERITS "QuestButtonBaseTemplate" {
+}
+
+Frame "BACKDROP" "QuestButtonPushedBackdropTemplate" {
+    DecorateFileNames,
+    BackdropTileBackground,
+    BackdropBackground  "QuestDialogCompletedBackground",
+    BackdropEdgeFile    "QuestDialogCompletedBorder",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize          0.0125,
+    BackdropBackgroundSize      0.128,
+    BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+}
+
+Frame "BACKDROP" "QuestButtonDisabledBackdropTemplate" {
+    DecorateFileNames,
+    BackdropBackground  "EscMenuEditBoxBackground",
+    BackdropEdgeFile    "EscMenuButtonBorder",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize          0.0125,
+    BackdropBackgroundSize      0.128,
+    BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+}
+
+Frame "BACKDROP" "QuestButtonDisabledPushedBackdropTemplate" {
+    DecorateFileNames,
+    BackdropTileBackground,
+    BackdropBackground  "QuestDialogFailedBackground",
+    BackdropEdgeFile    "QuestDialogFailedBorder",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize          0.0125,
+    BackdropBackgroundSize      0.128,
+    BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+}
+
+Frame "HIGHLIGHT" "QuestButtonMouseOverHighlightTemplate" {
+    DecorateFileNames,
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "QuestDialogButtonMouseOverHighlight",
+    HighlightAlphaMode "ADD",
+}
+
+Frame "GLUEBUTTON" "QuestButtonTemplate" {
+    Width  0.18,
+    Height 0.06,
+    ControlStyle "AUTOTRACK",
+
+    ControlBackdrop "ButtonBackdropTemplate",
+    Frame "BACKDROP" "ButtonBackdropTemplate" INHERITS "QuestButtonBackdropTemplate" {
+    }
+
+    ControlPushedBackdrop "ButtonPushedBackdropTemplate",
+    Frame "BACKDROP" "ButtonPushedBackdropTemplate" INHERITS "QuestButtonPushedBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "ButtonDisabledBackdropTemplate",
+    Frame "BACKDROP" "ButtonDisabledBackdropTemplate" INHERITS "QuestButtonDisabledBackdropTemplate" {
+    }
+
+    ControlDisabledPushedBackdrop "ButtonDisabledPushedBackdropTemplate",
+    Frame "BACKDROP" "ButtonDisabledPushedBackdropTemplate" INHERITS "QuestButtonDisabledPushedBackdropTemplate" {
+    }
+
+    ControlMouseOverHighlight "ButtonMouseOverHighlightTemplate",
+    Frame "HIGHLIGHT" "ButtonMouseOverHighlightTemplate" INHERITS "QuestButtonMouseOverHighlightTemplate" {
+    }
+}
+
+Frame "GLUECHECKBOX" "QuestCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+    Width  0.024,
+    Height 0.024,
+}
+
+
+// -- FRAMES ----------------------------------------------------------------
+Frame "FRAME" "QuestDialog" {
+    Width  0.48f,
+    Height 0.41875f,
+
+    Frame "BACKDROP" "QuestBackdrop" {
+        SetAllPoints,
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground          "EscMenuBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.048,
+        BackdropBackgroundSize      0.256,
+        BackdropBackgroundInsets    0.01 0.01 0.01 0.01,
+        BackdropEdgeFile            "EscMenuBorder",
+		BackdropBlendAll,
+    }
+
+    Frame "TEXT" "QuestTitleValue" INHERITS "EscMenuLabelTextTemplate" {
+        SetPoint TOP, "QuestDialog", TOP, 0.0, -0.03,
+        FontColor 0.99 0.827 0.0705 1.0,
+    }
+
+    Frame "TEXT" "QuestSubtitleValue" INHERITS "EscMenuTitleTextTemplate" {
+        SetPoint TOP, "QuestTitleValue", BOTTOM, 0.0, -0.002,
+        FontColor 1.0 1.0 1.0 1.0,
+    }
+
+    Frame "TEXT" "QuestMainTitle" INHERITS "EscMenuTitleTextTemplate" {
+        Width 0.2,
+        DecorateFileNames,
+        SetPoint TOPLEFT, "QuestBackdrop", TOPLEFT, 0.033, -0.06475,
+        FontFlags "FIXEDSIZE",
+        FontJustificationH JUSTIFYLEFT,
+        Text "QUESTSMAIN",
+    }
+    
+    Frame "FRAME" "QuestMainContainer" {
+        Height 0.11f,
+        Width  0.21f,
+        SetPoint TOPLEFT, "QuestMainTitle", BOTTOMLEFT,  -0.003, -0.002,
+    }
+
+    Frame "TEXT" "QuestOptionalTitle" INHERITS "EscMenuTitleTextTemplate" {
+        Width 0.2,
+        DecorateFileNames,
+        SetPoint TOPLEFT, "QuestMainTitle", TOPLEFT, 0.212, 0.0,
+        FontJustificationH JUSTIFYLEFT,
+        Text "QUESTSOPTIONAL",
+    }
+
+    Frame "FRAME" "QuestOptionalContainer" {
+        Height 0.11f,
+        Width  0.21f,
+        SetPoint TOPLEFT, "QuestMainContainer", TOPRIGHT, 0.003, 0.00,
+    }    
+
+    Frame "BACKDROP" "QuestDisplayBackdrop" {
+
+        Height  0.15f,
+        Width   0.417f,
+
+        SetPoint TOPLEFT, "QuestMainContainer", BOTTOMLEFT, 0.001, -0.015,
+
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground          "EscMenuEditBoxBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.0125,
+        BackdropBackgroundSize      0.256,
+        BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+        BackdropEdgeFile            "EscMenuEditBoxBorder",
+	    BackdropBlendAll,
+
+        Frame "TEXT" "QuestDetailsTitle" INHERITS "EscMenuTitleTextTemplate" {
+            Width 0.25,
+            DecorateFileNames,
+            SetPoint BOTTOMLEFT, "QuestDisplayBackdrop", TOPLEFT, 0.002f, -0.001,
+            FrameFont "MasterFont", 0.013,"",
+            FontJustificationH JUSTIFYLEFT,
+            FontFlags "FIXEDSIZE",
+            Text "A Quest", // should be filled in by game code...
+        }
+
+        Frame "FRAME" "QuestItemListContainer" {
+            SetPoint TOPLEFT, "QuestDetailsTitle", BOTTOMLEFT,   0.0,  -0.013,
+            Height 0.057,
+            Width  0.39,
+        }
+
+        Frame "TEXTAREA" "QuestDisplay" {
+            SetPoint TOPLEFT,     "QuestItemListContainer", BOTTOMLEFT,     0.003,  0.000,
+            SetPoint BOTTOMRIGHT, "QuestDisplayBackdrop",   BOTTOMRIGHT,   -0.01,   0.02,
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011,"",
+            TextAreaLineGap         0.001,
+            TextAreaMaxLines        32,
+            TextAreaLineHeight      0.011,
+            TextAreaInset           0.005,
+
+            TextAreaScrollBar "QuestDisplayScrollBar",
+            Frame "SCROLLBAR" "QuestDisplayScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+                SetPoint TOPRIGHT, "QuestDisplay", TOPRIGHT, 0.015, 0,
+            }
+        }
+    }
+
+    // --- bottom controls
+    Frame "GLUETEXTBUTTON" "QuestAcceptButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        Width  0.15f,
+        Height 0.03f,
+        SetPoint BOTTOM, "QuestDialog", BOTTOM, 0.0, 0.03,
+        ButtonText "QuestAcceptButtonText",
+	    Frame "TEXT" "QuestAcceptButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "QUESTACCEPT",
+	    }        
+    }
+}
+
+Frame "FRAME" "QuestListItem" {
+    Height 0.033,
+    Width  0.08,
+
+    Frame "BACKDROP" "QuestListItemIconContainer" {
+        UseActiveContext,
+        Width  0.035,
+        Height 0.035,        
+        SetPoint TOPLEFT, "QuestListItem", TOPLEFT, 0, 0,
+        DecorateFileNames,
+        BackdropBackground          "EscMenuBackground",
+        BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+
+        Frame "BACKDROP" "QuestListItemBorder" {
+            UseActiveContext,
+            SetAllPoints,            
+            DecorateFileNames,
+            BackdropBackground          "EscMenuBlankBackground",
+            BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+            BackdropCornerSize          0.0125,
+            BackdropBackgroundSize      0.032,
+            BackdropEdgeFile            "EscMenuButtonBorder",
+	    	BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+            BackdropBlendAll,    
+        }
+    }
+
+    Frame "GLUEBUTTON" "QuestListItemButton" INHERITS WITHCHILDREN "QuestButtonTemplate" {
+        UseActiveContext,
+        SetPoint TOPLEFT,       "QuestListItemIconContainer",   TOPRIGHT,      -0.003,  0,
+        SetPoint BOTTOMRIGHT,   "QuestListItem",                BOTTOMRIGHT,   -0.003,  0,    
+        ControlStyle "AUTOTRACK",
+
+        Frame "HIGHLIGHT" "QuestListItemFailedHighlight" INHERITS WITHCHILDREN "QuestButtonMouseOverHighlightTemplate" {
+            UseActiveContext,
+            SetAllPoints,
+            HighlightAlphaFile "QuestDialogFailedMouseOverHighlight",
+            HighlightAlphaMode "ADD",
+        }
+
+        Frame "HIGHLIGHT" "QuestListItemCompletedHighlight" INHERITS WITHCHILDREN "QuestButtonMouseOverHighlightTemplate" {
+            UseActiveContext,
+            SetAllPoints,
+            HighlightAlphaFile "QuestDialogCompletedMouseOverHighlight",
+            HighlightAlphaMode "ADD",
+        }
+
+        Frame "HIGHLIGHT" "QuestListItemSelectedHighlight" INHERITS WITHCHILDREN "QuestButtonMouseOverHighlightTemplate" {
+            UseActiveContext,
+            SetAllPoints,
+        }
+    }
+
+    Frame "TEXT" "QuestListItemComplete" INHERITS "EscMenuInfoTextTemplate" {
+        UseActiveContext,
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.009,"",
+        Width  0.06,
+	    FontJustificationH JUSTIFYLEFT,
+        SetPoint BOTTOMLEFT, "QuestListItemButton", BOTTOMLEFT, 0.012, 0.005,            
+    }
+
+    Frame "TEXT" "QuestListItemTitle" INHERITS "EscMenuButtonTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "QuestListItemButton", LEFT, 0.002, 0,
+        FontColor 1.0 1.0 1.0 1.0,
+        FontHighlightColor 1.0 1.0 1.0 1.0,
+        FontDisabledColor 0.4 0.5 0.6 0.7,
+        FontJustificationH JUSTIFYLEFT,
+	    FontJustificationOffset 0.01 0.001,                        
+        Text "QuestListItemTitle",
+	}
+}
+
+
+Frame "FRAME" "QuestItemListItem" {
+    Height 0.012,
+    Width  0.15,
+
+    Frame "TEXT" "QuestItemListItemTitle" INHERITS "EscMenuButtonTextTemplate" {
+        UseActiveContext,
+        SetPoint LEFT, "QuestItemListItem", LEFT, 0.002, 0,
+        SetPoint RIGHT, "QuestItemListItem", RIGHT, -0.002, 0,
+        FrameFont "MasterFont", 0.010,"",
+        FontColor 1.0 1.0 1.0 1.0,
+        FontHighlightColor 1.0 1.0 1.0 1.0,
+        FontDisabledColor 0.4 0.5 0.6 0.7,
+        FontJustificationH JUSTIFYLEFT,
+	    FontJustificationOffset 0.01 0.001,                        
+        Text "QuestItemListItemTitle",
+	}
+}
+
+
+// --- bottom controls
+Frame "GLUECHECKBOX" "QuestCheckBox2" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+    Width  0.012,
+    Height 0.012,
+}
+
+// --- bottom controls
+Frame "GLUECHECKBOX" "QuestCheckBox3" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {
+    Width  0.012,
+    Height 0.012,
+}
+
+Frame "SCROLLBAR" "QuestMainListScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+    SetPoint TOPRIGHT, "QuestMainContainer", TOPRIGHT, 0.005, 0,
+}
+
+Frame "SCROLLBAR" "QuestOptionalListScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+    SetPoint TOPRIGHT, "QuestOptionalContainer", TOPRIGHT, 0.005, 0,
+}
+
+Frame "SCROLLBAR" "QuestItemListScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+    SetPoint TOPRIGHT, "QuestItemListContainer", TOPRIGHT, 0.005, 0,
+}
+
+Frame "SCROLLBAR" "QuestConditionListScrollBar" INHERITS WITHCHILDREN "EscMenuScrollBarTemplate" {
+    SetPoint TOPRIGHT, "QuestConditionListContainer", TOPRIGHT, 0.005, 0,
+}

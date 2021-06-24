@@ -1,0 +1,60 @@
+/*
+ *  InfoPanelTemplates.fdf
+ *  ---------------------
+ *  These are templates to be inherited by most components 
+ *  in the in-game info panels.
+ */
+
+// --- TEXT -----------------------------------------------------------------------
+
+Frame "TEXT" "InfoPanelTitleTextTemplate" {
+    DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.013, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "TEXT" "InfoPanelDescriptionTextTemplate" {
+    DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.011, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,
+}
+
+Frame "TEXT" "InfoPanelLabelTextTemplate" {
+    DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.009, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,
+}
+
+Frame "TEXT" "InfoPanelAttributeTextTemplate" {
+    DecorateFileNames,
+    FrameFont "InfoPanelTextFont", 0.009, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,
+}

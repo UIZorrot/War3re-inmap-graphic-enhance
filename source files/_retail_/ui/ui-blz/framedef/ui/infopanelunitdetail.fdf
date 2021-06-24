@@ -1,0 +1,146 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\InfoPanelTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "InfoPanelUnitDetail" {
+    SetAllPoints,
+
+    // --- unit name frame --------------------------------------------------
+    Frame "TEXT" "NameValue" INHERITS "InfoPanelTitleTextTemplate" {
+        SetPoint TOP, "InfoPanelUnitDetail", TOP, 0.0, 0.0,
+    }
+
+    // --- hero level bar ---------------------------------------------------
+    Frame "SPRITE" "HeroLevelBar" {
+        SetPoint TOP, "InfoPanelUnitDetail", TOP, 0.0, -0.014375,
+    }
+
+    // --- unit stats panel -------------------------------------------------
+    Frame "FRAME" "UnitStatsPanel" {
+        Frame "SPRITE" "ProgressIndicator" {
+            SetPoint TOP, "InfoPanelUnitDetail", TOP, 0.0, -0.014375,
+        }
+
+        Frame "TEXT" "ClassValue" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOP, "NameValue", BOTTOM,  0.0, -0.005625,
+            FontColor 1.0 1.0 1.0 1.0,
+            FontJustificationH JUSTIFYCENTER,
+        }
+
+        Frame "TEXT" "DefenseLabel" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "InfoPanelUnitDetail", TOPLEFT, 0.001875, -0.035625,
+            Text "COLON_ARMOR",
+        }
+
+        Frame "TEXT" "DefenseValue" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint LEFT, "DefenseLabel", LEFT, 0.04625, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "AttackLabel1" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "DefenseLabel", BOTTOMLEFT, 0.0, -0.001,
+            Text "COLON_DAMAGE",
+        }
+
+        Frame "TEXT" "AttackValue1" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "DefenseValue", BOTTOMLEFT, 0.0, -0.001,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "AttackLabel2" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "AttackLabel1", BOTTOMLEFT, 0.0, -0.001,
+            Text "COLON_DAMAGE",
+        }
+
+        Frame "TEXT" "AttackValue2" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "AttackValue1", BOTTOMLEFT, 0.0, -0.001,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "SpeedTitle" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "DefenseLabel", TOPLEFT, 0.1, 0.0,
+            Text "COLON_SPEED",
+        }
+
+        Frame "TEXT" "SpeedValue" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "SpeedTitle", TOPLEFT, 0.03875, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "RangeTitle1" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "SpeedTitle", BOTTOMLEFT, 0.0, -0.001,
+            Text "COLON_RANGE",
+        }
+
+        Frame "TEXT" "RangeValue1" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "SpeedValue", BOTTOMLEFT, 0.0, -0.001,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "RangeTitle2" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "RangeTitle1", BOTTOMLEFT, 0.0, -0.001,
+            Text "COLON_RANGE",
+        }
+
+        Frame "TEXT" "RangeValue2" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "RangeValue1", BOTTOMLEFT, 0.0, -0.001,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "BACKDROP" "IconBackdrop1" {
+            Width 0.032,
+            Height 0.032,
+            DecorateFileNames,            
+            BackdropBlendAll,
+            BackdropBackground  "HeroStrengthIcon",
+            SetPoint BOTTOMLEFT, "InfoPanelUnitDetail", BOTTOMLEFT, 0.0, 0.00250,
+
+            Frame "TEXT" "IconValue1" INHERITS "InfoPanelAttributeTextTemplate" {
+                SetPoint CENTER, "IconBackdrop1", BOTTOMRIGHT, -0.007625, 0.006875,
+            }
+        }
+
+        Frame "BACKDROP" "IconBackdrop2" {
+            Width 0.032,
+            Height 0.032,
+            DecorateFileNames,            
+            BackdropBlendAll,
+            BackdropBackground  "HeroAgilityIcon",
+            SetPoint LEFT, "IconBackdrop1", RIGHT, 0.00234375, 0.0,
+
+            Frame "TEXT" "IconValue2" INHERITS "InfoPanelAttributeTextTemplate" {
+                SetPoint CENTER, "IconBackdrop2", BOTTOMRIGHT, -0.007625, 0.006875,
+            }
+        }
+
+        Frame "BACKDROP" "IconBackdrop3" {
+            Width 0.032,
+            Height 0.032,
+            DecorateFileNames,            
+            BackdropBlendAll,
+            BackdropBackground  "HeroIntelligenceIcon",
+            SetPoint LEFT, "IconBackdrop2", RIGHT, 0.00234375, 0.0,
+
+            Frame "TEXT" "IconValue3" INHERITS "InfoPanelAttributeTextTemplate" {
+                SetPoint CENTER, "IconBackdrop3", BOTTOMRIGHT, -0.007625, 0.006875,
+            }
+        }
+
+        Frame "BACKDROP" "IconBackdrop4" {
+            Width 0.032,
+            Height 0.032,
+            DecorateFileNames,            
+            BackdropBlendAll,
+            BackdropBackground  "HeroIntelligenceIcon",
+            SetPoint LEFT, "IconBackdrop3", RIGHT, 0.00234375, 0.0,
+
+            Frame "TEXT" "IconValue4" INHERITS "InfoPanelAttributeTextTemplate" {
+                SetPoint CENTER, "IconBackdrop4", BOTTOMRIGHT, -0.007625, 0.006875,
+            }
+        }
+    }
+}

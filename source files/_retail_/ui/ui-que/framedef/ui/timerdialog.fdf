@@ -1,0 +1,39 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- FRAMES ----------------------------------------------------------------
+Frame "FRAME" "TimerDialog" {
+
+    Width  0.17f,
+    Height 0.03f,
+
+    Frame "BACKDROP" "TimerDialogBackdrop" {
+        UseActiveContext,
+        SetAllPoints,
+	    DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground          "EscMenuEditBoxBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.0125,
+        BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+        BackdropEdgeFile            "EscMenuEditBoxBorder",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "TimerDialogValue" INHERITS "EscMenuInfoTextTemplate" {
+        UseActiveContext,
+        SetPoint RIGHT, "TimerDialogBackdrop",  RIGHT,  -0.01, 0.0,
+        Width 0.06,
+        FontJustificationH JUSTIFYRIGHT,
+        Text "00:00:00",
+    }
+
+    Frame "TEXT" "TimerDialogTitle" INHERITS "EscMenuLabelTextTemplate" {
+        UseActiveContext,
+        SetPoint RIGHT, "TimerDialogValue",    RIGHT, -0.01, 0.0,
+        SetPoint LEFT,  "TimerDialogBackdrop", LEFT,   0.01, 0.0,
+        FontJustificationH JUSTIFYLEFT,
+        Text "DEFAULTTIMERDIALOGTEXT",
+    }    
+}

@@ -1,0 +1,58 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "DIALOG" "GameResultDialog" {
+    Width  0.336f,
+    Height 0.192f,
+
+    DialogBackdrop "GameResultBackdrop",
+    Frame "BACKDROP" "GameResultBackdrop" {
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.048,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "EscMenuBorder",
+	BackdropBlendAll,
+    }
+
+    Frame "TEXT" "GameResultText" INHERITS "EscMenuTitleTextTemplate" {
+        SetPoint TOP, "GameResultDialog", TOP, 0.0, -0.03,
+    }
+
+    Frame "GLUETEXTBUTTON" "GameResultContinueButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint TOP, "GameResultText", BOTTOM, 0.0, -0.002,
+
+        ButtonText "GameResultContinueButtonText",
+	    Frame "TEXT" "GameResultContinueButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "CONTINUE_PLAYING",
+	    }
+    }    
+
+    Frame "GLUETEXTBUTTON" "GameResultRestartButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint TOP, "GameResultContinueButton", BOTTOM, 0.0, -0.002,
+
+        ButtonText "GameResultRestartButtonText",
+	    Frame "TEXT" "GameResultRestartButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "RESTART_MISSION",
+	    }
+    }
+
+    Frame "GLUETEXTBUTTON" "GameResultQuitButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint TOP, "GameResultRestartButton", BOTTOM, 0.0, -0.002,
+
+        ButtonText "GameResultQuitButtonText",
+	    Frame "TEXT" "GameResultQuitButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "QUIT_MISSION",
+	    }
+    }
+    
+}

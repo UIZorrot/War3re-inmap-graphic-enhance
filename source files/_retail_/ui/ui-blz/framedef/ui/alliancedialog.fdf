@@ -1,0 +1,113 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "DIALOG" "AllianceDialog" {
+    Width 0.576f,
+    Height 0.48f,
+
+    DialogBackdrop "AllianceBackdrop",
+    Frame "BACKDROP" "AllianceBackdrop" {
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.048,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "EscMenuBorder",
+	BackdropBlendAll,
+    }
+
+    Frame "TEXT" "AllianceTitle" INHERITS "EscMenuTitleTextTemplate" {
+        SetPoint TOPLEFT, "AllianceDialog", TOPLEFT, 0.03375, -0.03,
+        FontJustificationH JUSTIFYLEFT,
+        Text "ALLIANCES",
+    }
+
+    Frame "TEXT" "ResourceTradingTitle" INHERITS "EscMenuTitleTextTemplate" {
+        SetPoint TOPRIGHT, "AllianceDialog", TOPRIGHT, -0.045, -0.03,
+        FontJustificationH JUSTIFYLEFT,
+        Text "RESOURCE_TRADING",
+    }
+
+    // --- header labels
+    Frame "TEXT" "PlayersHeader" INHERITS "EscMenuLabelTextTemplate" {
+        SetPoint TOPLEFT, "AllianceDialog", TOPLEFT, 0.03625, -0.060875,
+        Text "PLAYERS",
+    }
+
+    Frame "TEXT" "AllyHeader" INHERITS "EscMenuLabelTextSmallTemplate" {
+        Width 0.046,
+        SetPoint BOTTOMLEFT, "PlayersHeader", BOTTOMLEFT, 0.216525, 0.0,
+        FontJustificationH JUSTIFYCENTER,
+        Text "ALLY",
+    }
+
+    Frame "TEXT" "VisionHeader" INHERITS "EscMenuLabelTextSmallTemplate" {
+        Width 0.046,
+        SetPoint BOTTOMLEFT, "AllyHeader", BOTTOMRIGHT, 0.004, 0.0,
+        FontJustificationH JUSTIFYCENTER,
+        Text "SHARE_VISION",
+    }
+
+    Frame "TEXT" "UnitsHeader" INHERITS "EscMenuLabelTextSmallTemplate" {
+        Width 0.046,
+        SetPoint BOTTOMLEFT, "VisionHeader", BOTTOMRIGHT, 0.004, 0.0,
+        FontJustificationH JUSTIFYCENTER,
+        Text "SHARE_UNITS",
+    }
+
+    Frame "TEXT" "GoldHeader" INHERITS "EscMenuLabelTextSmallTemplate" {
+        Width 0.048,
+        SetPoint BOTTOMLEFT, "UnitsHeader", BOTTOMRIGHT, 0.01825, 0.0,
+        FontJustificationH JUSTIFYCENTER,
+        Text "GOLD",
+    }
+
+    Frame "TEXT" "LumberHeader" INHERITS "EscMenuLabelTextSmallTemplate" {
+        Width 0.048,
+        SetPoint BOTTOMLEFT, "GoldHeader", BOTTOMRIGHT, 0.01, 0.0,
+        FontJustificationH JUSTIFYCENTER,
+        Text "LUMBER",
+    }
+
+    // --- bottom controls
+    Frame "GLUETEXTBUTTON" "AllianceAcceptButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        Width 0.13,
+        SetPoint BOTTOMRIGHT, "AllianceDialog", BOTTOM, -0.003, 0.03,
+
+        ButtonText "AllianceAcceptButtonText",
+	    Frame "TEXT" "AllianceAcceptButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "ACCEPT",
+	    }        
+    }
+
+    Frame "GLUETEXTBUTTON" "AllianceCancelButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        Width 0.13,
+        SetPoint LEFT, "AllianceAcceptButton", RIGHT, 0.005, 0.0,
+
+        ButtonText "AllianceCancelButtonText",
+	    Frame "TEXT" "AllianceCancelButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		    Text "CANCEL",
+	    }        
+    }
+
+    Frame "GLUECHECKBOX" "AlliedVictoryCheckBox" INHERITS WITHCHILDREN "EscMenuCheckBoxTemplate" {        
+	Width 0.024,
+	Height 0.024,
+        SetPoint BOTTOM, "AllianceDialog", BOTTOM, -0.056875, 0.06875,
+    }
+
+    Frame "TEXT" "AlliedVictoryLabel" INHERITS "EscMenuTitleTextTemplate" {
+        SetPoint LEFT, "AlliedVictoryCheckBox", RIGHT, 0.01, 0.0,
+        Text "ALLIED_VICTORY",
+    }
+
+    Frame "SCROLLBAR" "AllianceDialogScrollBar" INHERITS WITHCHILDREN "StandardScrollBarTemplate" {
+    }
+}

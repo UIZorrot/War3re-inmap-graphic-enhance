@@ -1,0 +1,1340 @@
+{
+  /*
+	  General Fields:
+		  "id": <string> - collectible ID. Must be a 4 character string.
+		  "name" <string> - Localization key for the name of the item to show in UI
+		  "description": <string> - Localization key for the description of the item to show in UI
+		  "icon": <string> - asset path of what icon should be shown
+          "criteria": <string> - way that the user unlocks
+              "ACHV<N>: Achievement completion. <N> should be a number that matches an Achievement ID in Achievements.json
+              "FREE": User always has this unlocked.
+              "SPOW": User owns the Spoils of War license.
+              "LGCY": User earned this portrait prior to the release of Reforged
+          "visibility": <number>
+              0: Hidden. Player cannot see this in the collection screen.
+              1: Visible. Player can always see this in the collection screen.
+              2: Unlocked Only. Player can only see this in the collection screen if they have it unlocked.
+              3: IgrOrUnlocked. Visible only in IGRs and for players who unlocked any IGR perks
+          "group": <number>
+              0: None. Will not be added to any group.
+              1: Skins. Will be added to SkinList.
+              2: Melee Portraits. Will be added to MeleePortraitList.
+              3: Campaign Portraits. Will be added to CampaignPortraitList.
+              4: Legacy Portraits. Will be added to LegacyPortraitList.
+
+	  Portraits:
+		  "portrait": <string> - Portrait ID. Must be a 4 character string.
+		  "race": <int> - value of what race this represents
+			  0 - Random
+			  1 - Human
+			  2 - Orc
+			  3 - Undead
+			  4 - Night Elf
+
+	  Skins:
+		  "skin": <string> - Skin ID. Must be a 4 character string.
+		  "unit": <string> - Unit ID. The unit type that this skin can be applied to. Unknown requirements.
+	  */
+  "portraits": [
+    {
+      "id": "p001",
+      "name": "COLLECTION_PORTRAIT_01_NAME",
+      "description": "COLLECTION_PORTRAIT_01_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p001",
+      "race": 3,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p002",
+      "name": "COLLECTION_PORTRAIT_02_NAME",
+      "description": "COLLECTION_PORTRAIT_02_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p002",
+      "race": 1,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p003",
+      "name": "COLLECTION_PORTRAIT_03_NAME",
+      "description": "COLLECTION_PORTRAIT_03_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p003",
+      "race": 2,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p004",
+      "name": "COLLECTION_PORTRAIT_04_NAME",
+      "description": "COLLECTION_PORTRAIT_04_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p004",
+      "race": 4,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p005",
+      "name": "COLLECTION_PORTRAIT_05_NAME",
+      "description": "COLLECTION_PORTRAIT_05_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p005",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p006",
+      "name": "COLLECTION_PORTRAIT_06_NAME",
+      "description": "COLLECTION_PORTRAIT_06_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p006",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p007",
+      "name": "COLLECTION_PORTRAIT_07_NAME",
+      "description": "COLLECTION_PORTRAIT_07_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p007",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p008",
+      "name": "COLLECTION_PORTRAIT_08_NAME",
+      "description": "COLLECTION_PORTRAIT_08_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p008",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p009",
+      "name": "COLLECTION_PORTRAIT_09_NAME",
+      "description": "COLLECTION_PORTRAIT_09_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p009",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p010",
+      "name": "COLLECTION_PORTRAIT_10_NAME",
+      "description": "COLLECTION_PORTRAIT_10_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p010",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p011",
+      "name": "COLLECTION_PORTRAIT_11_NAME",
+      "description": "COLLECTION_PORTRAIT_11_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p011",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p012",
+      "name": "COLLECTION_PORTRAIT_12_NAME",
+      "description": "COLLECTION_PORTRAIT_12_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p012",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p013",
+      "name": "COLLECTION_PORTRAIT_13_NAME",
+      "description": "COLLECTION_PORTRAIT_13_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p013",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p014",
+      "name": "COLLECTION_PORTRAIT_14_NAME",
+      "description": "COLLECTION_PORTRAIT_14_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p014",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p015",
+      "name": "COLLECTION_PORTRAIT_15_NAME",
+      "description": "COLLECTION_PORTRAIT_15_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p015",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p016",
+      "name": "COLLECTION_PORTRAIT_16_NAME",
+      "description": "COLLECTION_PORTRAIT_16_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p016",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p017",
+      "name": "COLLECTION_PORTRAIT_17_NAME",
+      "description": "COLLECTION_PORTRAIT_17_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p017",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p018",
+      "name": "COLLECTION_PORTRAIT_18_NAME",
+      "description": "COLLECTION_PORTRAIT_18_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p018",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p019",
+      "name": "COLLECTION_PORTRAIT_19_NAME",
+      "description": "COLLECTION_PORTRAIT_19_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p019",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p020",
+      "name": "COLLECTION_PORTRAIT_20_NAME",
+      "description": "COLLECTION_PORTRAIT_20_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p020",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p021",
+      "name": "COLLECTION_PORTRAIT_21_NAME",
+      "description": "COLLECTION_PORTRAIT_21_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p021",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p022",
+      "name": "COLLECTION_PORTRAIT_22_NAME",
+      "description": "COLLECTION_PORTRAIT_22_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p022",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p023",
+      "name": "COLLECTION_PORTRAIT_23_NAME",
+      "description": "COLLECTION_PORTRAIT_23_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p023",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p024",
+      "name": "COLLECTION_PORTRAIT_24_NAME",
+      "description": "COLLECTION_PORTRAIT_24_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p024",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p025",
+      "name": "COLLECTION_PORTRAIT_25_NAME",
+      "description": "COLLECTION_PORTRAIT_25_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p025",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p026",
+      "name": "COLLECTION_PORTRAIT_26_NAME",
+      "description": "COLLECTION_PORTRAIT_26_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p026",
+      "race": 1,
+      "visibility": 1,
+      "group": 3
+    },
+    {
+      "id": "p027",
+      "name": "COLLECTION_PORTRAIT_27_NAME",
+      "description": "COLLECTION_PORTRAIT_27_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p027",
+      "race": 1,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p028",
+      "name": "COLLECTION_PORTRAIT_28_NAME",
+      "description": "COLLECTION_PORTRAIT_28_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p028",
+      "race": 1,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p029",
+      "name": "COLLECTION_PORTRAIT_29_NAME",
+      "description": "COLLECTION_PORTRAIT_29_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p029",
+      "race": 1,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p030",
+      "name": "COLLECTION_PORTRAIT_30_NAME",
+      "description": "COLLECTION_PORTRAIT_30_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p030",
+      "race": 1,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p031",
+      "name": "COLLECTION_PORTRAIT_31_NAME",
+      "description": "COLLECTION_PORTRAIT_31_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p031",
+      "race": 1,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p032",
+      "name": "COLLECTION_PORTRAIT_32_NAME",
+      "description": "COLLECTION_PORTRAIT_32_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p032",
+      "race": 1,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p033",
+      "name": "COLLECTION_PORTRAIT_33_NAME",
+      "description": "COLLECTION_PORTRAIT_33_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p033",
+      "race": 2,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p034",
+      "name": "COLLECTION_PORTRAIT_34_NAME",
+      "description": "COLLECTION_PORTRAIT_34_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p034",
+      "race": 2,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p035",
+      "name": "COLLECTION_PORTRAIT_35_NAME",
+      "description": "COLLECTION_PORTRAIT_35_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p035",
+      "race": 2,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p036",
+      "name": "COLLECTION_PORTRAIT_36_NAME",
+      "description": "COLLECTION_PORTRAIT_36_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p036",
+      "race": 2,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p037",
+      "name": "COLLECTION_PORTRAIT_37_NAME",
+      "description": "COLLECTION_PORTRAIT_37_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p037",
+      "race": 2,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p038",
+      "name": "COLLECTION_PORTRAIT_38_NAME",
+      "description": "COLLECTION_PORTRAIT_38_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p038",
+      "race": 2,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p039",
+      "name": "COLLECTION_PORTRAIT_39_NAME",
+      "description": "COLLECTION_PORTRAIT_39_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p039",
+      "race": 3,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p040",
+      "name": "COLLECTION_PORTRAIT_40_NAME",
+      "description": "COLLECTION_PORTRAIT_40_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p040",
+      "race": 3,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p041",
+      "name": "COLLECTION_PORTRAIT_41_NAME",
+      "description": "COLLECTION_PORTRAIT_41_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p041",
+      "race": 3,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p042",
+      "name": "COLLECTION_PORTRAIT_42_NAME",
+      "description": "COLLECTION_PORTRAIT_42_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p042",
+      "race": 3,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p043",
+      "name": "COLLECTION_PORTRAIT_43_NAME",
+      "description": "COLLECTION_PORTRAIT_43_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p043",
+      "race": 3,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p044",
+      "name": "COLLECTION_PORTRAIT_44_NAME",
+      "description": "COLLECTION_PORTRAIT_44_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p044",
+      "race": 3,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p045",
+      "name": "COLLECTION_PORTRAIT_45_NAME",
+      "description": "COLLECTION_PORTRAIT_45_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p045",
+      "race": 4,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p046",
+      "name": "COLLECTION_PORTRAIT_46_NAME",
+      "description": "COLLECTION_PORTRAIT_46_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p046",
+      "race": 4,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p047",
+      "name": "COLLECTION_PORTRAIT_47_NAME",
+      "description": "COLLECTION_PORTRAIT_47_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p047",
+      "race": 4,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p048",
+      "name": "COLLECTION_PORTRAIT_48_NAME",
+      "description": "COLLECTION_PORTRAIT_48_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p048",
+      "race": 4,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p049",
+      "name": "COLLECTION_PORTRAIT_49_NAME",
+      "description": "COLLECTION_PORTRAIT_49_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p049",
+      "race": 4,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p050",
+      "name": "COLLECTION_PORTRAIT_50_NAME",
+      "description": "COLLECTION_PORTRAIT_50_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p050",
+      "race": 4,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p051",
+      "name": "COLLECTION_PORTRAIT_51_NAME",
+      "description": "COLLECTION_PORTRAIT_51_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p051",
+      "race": 0,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p052",
+      "name": "COLLECTION_PORTRAIT_52_NAME",
+      "description": "COLLECTION_PORTRAIT_52_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p052",
+      "race": 0,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p053",
+      "name": "COLLECTION_PORTRAIT_53_NAME",
+      "description": "COLLECTION_PORTRAIT_53_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p053",
+      "race": 0,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p054",
+      "name": "COLLECTION_PORTRAIT_54_NAME",
+      "description": "COLLECTION_PORTRAIT_54_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p054",
+      "race": 0,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p055",
+      "name": "COLLECTION_PORTRAIT_55_NAME",
+      "description": "COLLECTION_PORTRAIT_55_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p055",
+      "race": 0,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p056",
+      "name": "COLLECTION_PORTRAIT_56_NAME",
+      "description": "COLLECTION_PORTRAIT_56_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p056",
+      "race": 0,
+      "visibility": 1,
+      "group": 2
+    },
+    {
+      "id": "p057",
+      "name": "COLLECTION_PORTRAIT_57_NAME",
+      "description": "COLLECTION_PORTRAIT_57_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p057",
+      "race": 1,
+      "visibility": 3,
+      "group": 2
+    },
+    {
+      "id": "p058",
+      "name": "COLLECTION_PORTRAIT_58_NAME",
+      "description": "COLLECTION_PORTRAIT_58_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p058",
+      "race": 1,
+      "visibility": 3,
+      "group": 2
+    },
+    {
+      "id": "p059",
+      "name": "COLLECTION_PORTRAIT_59_NAME",
+      "description": "COLLECTION_PORTRAIT_59_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p059",
+      "race": 1,
+      "visibility": 3,
+      "group": 2
+    },
+    {
+      "id": "p060",
+      "name": "COLLECTION_PORTRAIT_60_NAME",
+      "description": "COLLECTION_PORTRAIT_60_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p060",
+      "race": 1,
+      "visibility": 3,
+      "group": 2
+    },
+    {
+      "id": "p061",
+      "name": "COLLECTION_PORTRAIT_61_NAME",
+      "description": "COLLECTION_PORTRAIT_61_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p061",
+      "race": 1,
+      "visibility": 3,
+      "group": 2
+    },
+    {
+      "id": "p062",
+      "name": "COLLECTION_PORTRAIT_62_NAME",
+      "description": "COLLECTION_PORTRAIT_62_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "p062",
+      "race": 1,
+      "visibility": 3,
+      "group": 2
+    },
+    {
+      "id": "lp01",
+      "name": "COLLECTION_LEGACY_PORTRAIT_01_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_01_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "ngrd",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp02",
+      "name": "COLLECTION_LEGACY_PORTRAIT_02_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_02_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nadr",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp03",
+      "name": "COLLECTION_LEGACY_PORTRAIT_03_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_03_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nrdr",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp04",
+      "name": "COLLECTION_LEGACY_PORTRAIT_04_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_04_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nbwm",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp05",
+      "name": "COLLECTION_LEGACY_PORTRAIT_05_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_05_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "hfoo",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp06",
+      "name": "COLLECTION_LEGACY_PORTRAIT_06_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_06_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "hkni",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp07",
+      "name": "COLLECTION_LEGACY_PORTRAIT_07_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_07_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Hamg",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp08",
+      "name": "COLLECTION_LEGACY_PORTRAIT_08_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_08_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nmed",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp09",
+      "name": "COLLECTION_LEGACY_PORTRAIT_09_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_09_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "ogru",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp10",
+      "name": "COLLECTION_LEGACY_PORTRAIT_10_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_10_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "otau",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp11",
+      "name": "COLLECTION_LEGACY_PORTRAIT_11_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_11_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Ofar",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp12",
+      "name": "COLLECTION_LEGACY_PORTRAIT_12_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_12_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Othr",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp13",
+      "name": "COLLECTION_LEGACY_PORTRAIT_13_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_13_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "ugho",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp14",
+      "name": "COLLECTION_LEGACY_PORTRAIT_14_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_14_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "uabo",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp15",
+      "name": "COLLECTION_LEGACY_PORTRAIT_15_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_15_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Ulic",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp16",
+      "name": "COLLECTION_LEGACY_PORTRAIT_16_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_16_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Utic",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp17",
+      "name": "COLLECTION_LEGACY_PORTRAIT_17_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_17_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "earc",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp18",
+      "name": "COLLECTION_LEGACY_PORTRAIT_18_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_18_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "edoc",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp19",
+      "name": "COLLECTION_LEGACY_PORTRAIT_19_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_19_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Emoo",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp20",
+      "name": "COLLECTION_LEGACY_PORTRAIT_20_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_20_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Efur",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp21",
+      "name": "COLLECTION_LEGACY_PORTRAIT_21_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_21_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nmyr",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp22",
+      "name": "COLLECTION_LEGACY_PORTRAIT_22_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_22_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nnsw",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp23",
+      "name": "COLLECTION_LEGACY_PORTRAIT_23_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_23_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nhyc",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp24",
+      "name": "COLLECTION_LEGACY_PORTRAIT_24_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_24_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Hvsh",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp25",
+      "name": "COLLECTION_LEGACY_PORTRAIT_25_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_25_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Eevm",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp26",
+      "name": "COLLECTION_LEGACY_PORTRAIT_26_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_26_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "hrif",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp27",
+      "name": "COLLECTION_LEGACY_PORTRAIT_27_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_27_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "hsor",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp28",
+      "name": "COLLECTION_LEGACY_PORTRAIT_28_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_28_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "hspt",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp29",
+      "name": "COLLECTION_LEGACY_PORTRAIT_29_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_29_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Hblm",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp30",
+      "name": "COLLECTION_LEGACY_PORTRAIT_30_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_30_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Hjai",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp31",
+      "name": "COLLECTION_LEGACY_PORTRAIT_31_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_31_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "ohun",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp32",
+      "name": "COLLECTION_LEGACY_PORTRAIT_32_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_32_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "oshm",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp33",
+      "name": "COLLECTION_LEGACY_PORTRAIT_33_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_33_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "ospw",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp34",
+      "name": "COLLECTION_LEGACY_PORTRAIT_34_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_34_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Oshd",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp35",
+      "name": "COLLECTION_LEGACY_PORTRAIT_35_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_35_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Orex",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp36",
+      "name": "COLLECTION_LEGACY_PORTRAIT_36_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_36_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "ucry",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp37",
+      "name": "COLLECTION_LEGACY_PORTRAIT_37_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_37_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "uban",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp38",
+      "name": "COLLECTION_LEGACY_PORTRAIT_38_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_38_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "uobs",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp39",
+      "name": "COLLECTION_LEGACY_PORTRAIT_39_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_39_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Ucrl",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp40",
+      "name": "COLLECTION_LEGACY_PORTRAIT_40_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_40_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Usyl",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp41",
+      "name": "COLLECTION_LEGACY_PORTRAIT_41_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_41_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "esen",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp42",
+      "name": "COLLECTION_LEGACY_PORTRAIT_42_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_42_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "edot",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp43",
+      "name": "COLLECTION_LEGACY_PORTRAIT_43_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_43_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "edry",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp44",
+      "name": "COLLECTION_LEGACY_PORTRAIT_44_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_44_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Ekee",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp45",
+      "name": "COLLECTION_LEGACY_PORTRAIT_45_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_45_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Ewrd",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp46",
+      "name": "COLLECTION_LEGACY_PORTRAIT_46_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_46_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nfgu",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp47",
+      "name": "COLLECTION_LEGACY_PORTRAIT_47_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_47_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "ninf",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp48",
+      "name": "COLLECTION_LEGACY_PORTRAIT_48_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_48_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "nbal",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp49",
+      "name": "COLLECTION_LEGACY_PORTRAIT_49_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_49_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Nplh",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    },
+    {
+      "id": "lp50",
+      "name": "COLLECTION_LEGACY_PORTRAIT_50_NAME",
+      "description": "COLLECTION_LEGACY_PORTRAIT_50_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "portrait": "Uwar",
+      "race": 1,
+      "visibility": 2,
+      "group": 4
+    }
+  ],
+  "skins": [
+    {
+      "id": "s001",
+      "name": "SPOILS_SKIN_01_NAME",
+      "description": "SPOILS_SKIN_01_DESC",
+      "icon": "",
+      "criteria": "SPOW",
+      "skin": "Ofth",
+      "unit": "Ofar",
+      "visibility": 1,
+      "group": 1
+    },
+    {
+      "id": "s002",
+      "name": "SPOILS_SKIN_02_NAME",
+      "description": "SPOILS_SKIN_02_DESC",
+      "icon": "",
+      "criteria": "SPOW",
+      "skin": "Hjas",
+      "unit": "Hamg",
+      "visibility": 1,
+      "group": 1
+    },
+    {
+      "id": "s003",
+      "name": "SPOILS_SKIN_03_NAME",
+      "description": "SPOILS_SKIN_03_DESC",
+      "icon": "",
+      "criteria": "SPOW",
+      "skin": "Uart",
+      "unit": "Udea",
+      "visibility": 1,
+      "group": 1
+    },
+    {
+      "id": "s004",
+      "name": "SPOILS_SKIN_04_NAME",
+      "description": "SPOILS_SKIN_04_DESC",
+      "icon": "",
+      "criteria": "SPOW",
+      "skin": "Ekce",
+      "unit": "Ekee",
+      "visibility": 1,
+      "group": 1
+    },
+	{
+      "id": "s005",
+      "name": "STANDARD_SKIN_01_NAME",
+      "description": "STANDARD_SKIN_01_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "skin": "Udef",
+      "unit": "Udea",
+      "visibility": 1,
+      "group": 1
+    },
+	{
+      "id": "s006",
+      "name": "STANDARD_SKIN_02_NAME",
+      "description": "STANDARD_SKIN_02_DESC",
+      "icon": "",
+      "criteria": "FREE",
+      "skin": "Edef",
+      "unit": "Edem",
+      "visibility": 1,
+      "group": 1
+    }
+  ]
+}

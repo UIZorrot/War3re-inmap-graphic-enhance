@@ -1,0 +1,57 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\InfoPanelTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "InfoPanelBuildingDetail" {
+    SetAllPoints,
+
+    Frame "TEXT" "BuildingNameValue" INHERITS "InfoPanelTitleTextTemplate" {
+        SetPoint TOP, "InfoPanelUnitDetail", TOP, 0.0, 0.0,
+    }
+
+    Frame "TEXT" "BuildingDescriptionValue" INHERITS "InfoPanelDescriptionTextTemplate" {
+        Width 0.188,
+        SetPoint TOP, "BuildingNameValue", BOTTOM, 0.0, -0.007,
+    }
+
+    Frame "FRAME" "BuildingStatPanel" {
+        Frame "TEXT" "BuildingDefenseLabel" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "InfoPanelBuildingDetail", TOPLEFT, 0.001875, -0.035625,
+            Text "COLON_ARMOR",
+        }
+
+        Frame "TEXT" "BuildingDefenseValue" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint LEFT, "BuildingDefenseLabel", RIGHT, 0.005, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "TEXT" "BuildingSupplyLabel" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint TOPLEFT, "BuildingDefenseLabel", BOTTOMLEFT, 0.0, -0.001,
+            Text "COLON_SUPPLY_PROVIDED",
+        }
+
+        Frame "TEXT" "BuildingSupplyValue" INHERITS "InfoPanelLabelTextTemplate" {
+            SetPoint LEFT, "BuildingSupplyLabel", RIGHT, 0.005, 0.0,
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+    }
+
+    Frame "FRAME" "BuildTimeIndicator" {
+        SetPoint TOPLEFT, "InfoPanelBuildingDetail", TOPLEFT, 0.061250, -0.038125,
+    }
+
+    Frame "TEXT" "BuildingActionLabel" INHERITS "InfoPanelDescriptionTextTemplate" {
+        SetPoint BOTTOM, "BuildTimeIndicator", TOP, 0.0, 0.00325,
+    }
+
+    Frame "BACKDROP" "BuildQueueBackdrop" {
+        Height 0.1,
+        DecorateFileNames,            
+        BackdropBlendAll,
+        BackdropBackground  "BuildQueueBackdrop",
+    }
+}

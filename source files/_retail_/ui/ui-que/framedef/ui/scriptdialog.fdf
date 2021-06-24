@@ -1,0 +1,40 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "DIALOG" "ScriptDialog" {
+    UseActiveContext,
+    Width  0.288f,
+    Height 0.112f,
+
+    DialogBackdrop "ScriptDialogBackdrop",
+    Frame "BACKDROP" "ScriptDialogBackdrop" {
+        DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground  "EscMenuBackground",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.048,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "EscMenuBorder",
+	BackdropBlendAll,
+    }
+
+    Frame "TEXT" "ScriptDialogText" INHERITS "EscMenuTitleTextTemplate" {
+        UseActiveContext,
+        SetPoint TOP, "ScriptDialog", TOP, 0.0, -0.03,
+    }    
+}
+
+Frame "GLUETEXTBUTTON" "ScriptDialogButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+    UseActiveContext,
+    ButtonText "ScriptDialogButtonText",
+	Frame "TEXT" "ScriptDialogButtonText" INHERITS "EscMenuButtonTextTemplate" {
+		Text "",
+	}
+}    
