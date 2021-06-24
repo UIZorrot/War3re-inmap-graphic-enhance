@@ -1,0 +1,10 @@
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\obj\x64\Debug\ChecksumFix.csproj.CoreCompileInputs.cache
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\bin\x64\Debug\LICENSE.txt
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\bin\x64\Debug\ChecksumFix.exe.config
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\bin\x64\Debug\ChecksumFix.exe
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\bin\x64\Debug\ChecksumFix.pdb
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\bin\x64\Debug\DXBCChecksum.dll
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\bin\x64\Debug\DXBCChecksum.pdb
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\obj\x64\Debug\ChecksumFix.csproj.CopyComplete
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\obj\x64\Debug\ChecksumFix.exe
+C:\Users\uizor\Desktop\ffxvDitherPatch-master\ChecksumFix\obj\x64\Debug\ChecksumFix.pdb
