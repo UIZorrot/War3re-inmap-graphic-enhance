@@ -24,13 +24,5 @@ description: 多种不同情形下MOD的安装方法
 
 手动安装 - 手动解压完整安装包放置到魔兽目录
 
-MAC安装 - 手动解压包并且注册
-
-{% page-ref page="chang-gui-an-zhuang.md" %}
-
-{% page-ref page="shou-dong-an-zhuang.md" %}
-
-{% page-ref page="mac-an-zhuang.md" %}
-
-
+MAC/Linux安装 - 手动解压包并且注册
 
