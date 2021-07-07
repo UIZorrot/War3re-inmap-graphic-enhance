@@ -13,4 +13,5 @@
   * [自定义](gong-neng/zi-ding-yi.md)
 * [常见问题](chang-jian-wen-ti/README.md)
   * [游戏错误](chang-jian-wen-ti/you-xi-cuo-wu.md)
+  * [其他错误](chang-jian-wen-ti/qi-ta-cuo-wu.md)
 
