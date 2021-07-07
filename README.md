@@ -1,14 +1,58 @@
-## War3re-inmap-graphic-enhance AKA Quenching MOD
+---
+description: 本章节可以让你对MOD有一个大致的了解
+---
 
-#mod 
-- files used in QuenchingModCN.exe client
-- do not pull any requests about this area
+# 介绍
 
-#source files
-- Contain every files in quenching mod
-- And it's open source so feel free to use but add my name on your work
+## **简介**
 
-#shaders
-- a .net project to gen .bls files
-- use hexeditor or other binary editor to modified
-- and use this project to make it vaild in war3re
+![](.gitbook/assets/5.png)
+
+\[淬火试炼\]是一款基于魔兽争霸:重制版的插件
+
+旨在提升游戏的画面，以及功能上的拓展
+
+请注意，\[淬火试炼\]必须在魔兽争霸1.32以上版本才能够使用
+
+同时\[淬火试炼\]并不会自动将经典版画面升级为重置版画面
+
+经典版画面也能够使用\[淬火试炼\]但是仅支持战役/涂装/调整功能
+
+并不会有画质上的大幅提升
+
+## 功能
+
+在性能降低较少的情况下大幅提升画质
+
+能够在对抗地图中调节镜头，亮度和迷雾效果
+
+可以在大部分地图中自由变换单位和英雄的外观
+
+能够读取魔兽允许的自定义战役文件
+
+与淬火兼容性较好的各类RPG地图资源
+
+## 运行要求
+
+### MOD本体
+
+在魔兽争霸:重制版本体能够正常运行的情况下，MOD即可运行
+
+请注意，对于特定型号的显卡，如AMD或者Intel
+
+可能会出现画面白屏或者闪烁的情况
+
+请在控制台中找到 \[综合\] - \[高级着色器\] 并且关闭
+
+如果是手动安装，请找到 \[魔兽根目录\] - \[_retail_\] - \[shaders\] 文件夹并删除
+
+### 客户端
+
+推荐使用Windows 10以及以上版本运行平台
+
+如果无法运行，需要安装 .net framework 4.7.2及以上版本
+
+目前还不支持Linux以及Mac操作系统
+
+需要虚拟环境软件如Parallels进行使用
+
